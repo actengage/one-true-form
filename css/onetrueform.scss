@@ -83,6 +83,10 @@ $vertical-form-width: 33%;
 
 		&.no-content{
 
+			.content{
+				display:none !important;
+			}
+
 			width:$vertical-form-width;
 
 			.form{
@@ -90,7 +94,6 @@ $vertical-form-width: 33%;
 			}
 		}
 	}
-
 
 	#oneTrueForm.horizontal{	
 		width:100%;
@@ -114,6 +117,11 @@ $vertical-form-width: 33%;
 
 			&.no-content{
 				width:100%;
+				
+				.content{
+				display:none !important;
+				}
+
 			}
 		}
 	}
