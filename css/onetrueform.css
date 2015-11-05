@@ -1,0 +1,109 @@
+/*basic form layout*/
+#oneTrueForm {
+  overflow: auto;
+  padding: 5px 5px;
+  overflow: auto;
+  min-width: 320px;
+  width: 100%;
+}
+#oneTrueForm .form .section-container {
+  display: block;
+  padding: 5px;
+}
+#oneTrueForm .form-section {
+  width: 100%;
+  margin: 0 auto;
+}
+#oneTrueForm .content {
+  padding: 5px;
+}
+
+/*border box model for modern browsers*/
+@media screen {
+  html {
+    box-sizing: border-box;
+  }
+
+  #oneTrueForm {
+    min-width: 960px;
+    padding: 5px 5px;
+    overflow: auto;
+  }
+}
+@media screen and (min-width: 0px) {
+  #oneTrueForm {
+    min-width: 0;
+  }
+}
+@media screen {
+  #oneTrueForm .form .section-container {
+    display: block;
+    padding: 5px;
+  }
+  #oneTrueForm .form-section {
+    overflow: auto;
+    width: 100%;
+    margin: 0 auto;
+  }
+  #oneTrueForm .content {
+    padding: 5px;
+    float: right;
+  }
+
+  #oneTrueForm.vertical .form {
+    width: 33%;
+  }
+  #oneTrueForm.vertical .content {
+    width: 67%;
+  }
+  #oneTrueForm.vertical .section-container {
+    float: left;
+    clear: left;
+    width: 100%;
+  }
+  #oneTrueForm.vertical.no-content {
+    width: 33%;
+  }
+  #oneTrueForm.vertical.no-content .form {
+    width: 100%;
+  }
+
+  #oneTrueForm.horizontal {
+    width: 100%;
+    min-width: 380px;
+  }
+  #oneTrueForm.horizontal .section-container {
+    width: 33.3%;
+    float: left;
+  }
+}
+@media screen and (max-width: 960px) {
+  #oneTrueForm.vertical .form {
+    width: 38%;
+  }
+  #oneTrueForm.vertical .content {
+    width: 62%;
+  }
+  #oneTrueForm.vertical.no-content {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #oneTrueForm.vertical, #oneTrueForm.horizontal {
+    clear: both;
+    width: 100%;
+    min-width: 100px;
+  }
+  #oneTrueForm.vertical .form, #oneTrueForm.horizontal .form {
+    width: 100% !important;
+  }
+  #oneTrueForm.vertical .content, #oneTrueForm.horizontal .content {
+    width: 100%;
+    float: left;
+  }
+  #oneTrueForm.vertical .section-container, #oneTrueForm.horizontal .section-container {
+    clear: both;
+    float: none !important;
+    width: 100% !important;
+  }
+}

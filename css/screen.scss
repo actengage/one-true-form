@@ -1,0 +1,41 @@
+/*This file is for presentation of the demo only and unrequired for usage*/
+
+#wrapper.contained{ 
+	max-width:1020px;
+	margin:0 auto;
+}
+
+#wrapper.uncontained{
+	width:100%;
+	margin:0 auto;
+}
+
+body{
+	font-family:"helvetica neue","helvetica",arial;
+	color:#666;
+	-webkit-font-smoothing:antialiased;
+}
+
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+h1{
+	margin:0;
+	padding:0 10px 6px;
+	font-weight:300;
+
+}
+
+h3{
+	margin:0;
+	padding:0 0 6px;
+	font-weight:300;
+	border-bottom:1px solid #b0b0b0;
+}
+
+.section{
+	min-height:200px;
+}
+
