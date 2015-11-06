@@ -9,7 +9,7 @@ Link to external css:
 ```
 
 ```html
-<div id="oneTrueForm" class="[vertical/horizontal] [no-content]">
+<link rel="stylesheet" href="css/onetrueform.css">     
 ```
 
 Optional: Project specific css can be added to a provide file to keep the main CSS form clean:
