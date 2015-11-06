@@ -4,16 +4,15 @@
 
 ####CSS
 Link to external css:
-```
-<link rel="stylesheet" href="css/onetrueform.css">     
-```
+
 
 ```html
 <link rel="stylesheet" href="css/onetrueform.css">     
 ```
 
 Optional: Project specific css can be added to a provide file to keep the main CSS form clean:
-```
+
+```html
 <link rel="stylesheet" href="css/onetrueform-custom.css">     
 ```
 
