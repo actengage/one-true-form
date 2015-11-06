@@ -1,9 +1,19 @@
 /*This file is for presentation of the demo only and unrequired for usage*/
-
 #wrapper.contained{ 
-	max-width:1020px;
-	margin:0 auto;
+		width:1020px;
+		margin:0 auto;
+	}
+
+@media (min-width: 0px){
+	#wrapper.contained{ 
+		width:100%;
+		max-width:1020px !important;
+		margin:0 auto;
+	}
 }
+
+
+
 
 #wrapper.uncontained{
 	width:100%;

@@ -3,7 +3,6 @@
 
 //sass variables
 $breakpoint-tablet: 768px;
-$breakpoint-desktop: 960px;
 $vertical-form-width: 33%;
 
 /*basic form layout*/
@@ -39,7 +38,7 @@ $vertical-form-width: 33%;
 	}
 	
 	#oneTrueForm{
-		min-width:$breakpoint-desktop;
+		
 		@media (min-width: 0px){
 			min-width:0;
 		}
@@ -104,27 +103,7 @@ $vertical-form-width: 33%;
 		}	
 	}
 
-	@media (max-width: $breakpoint-desktop) {
-		#oneTrueForm.vertical{
 
-			.form{
-				width:$vertical-form-width + 5%;	
-			}
-
-			.content{
-				width:100% - ($vertical-form-width + 5%);		
-			}
-
-			&.no-content{
-				width:100%;
-				
-				.content{
-				display:none !important;
-				}
-
-			}
-		}
-	}
 
 	@media (max-width: $breakpoint-tablet) {
 		#oneTrueForm.vertical, #oneTrueForm.horizontal{
@@ -132,20 +111,28 @@ $vertical-form-width: 33%;
 			width:100%;
 			min-width: 100px;
 
-				.form{
-					width:100% !important;
-				}
-
-				.content{
-					width:100%;
-					float:left;
-				}
-
-				.section-container{
-					clear:both;
-					float:none !important;
-					width:100% !important;
+			.form{
+				width:100% !important;
 			}
+
+			.content{
+				width:100%;
+				float:left;
+			}
+
+			.section-container{
+				clear:both;
+				float:none !important;
+				width:100% !important;
+			}
+
+			&.no-content{
+		
+				width:100%;
+
+			}
+
+
 		}	  
 	}
 }

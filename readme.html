@@ -4,30 +4,113 @@
 	<meta charset="utf-8"/>
 </head>
 <body>
-<div id="oneTrueForm" class="[vertical/horizontal] [no-content]">
-    <div class="content">
-        <div class="section">
+<h2 id="onetrueform">OneTrueForm</h2>
+
+<h3 id="basicusage">Basic Usage</h3>
+
+<h4 id="css">CSS</h4>
+
+<p>Link to external css:
+<code>html
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/onetrueform.css&quot;&gt;     
+</code></p>
+
+<p>Optional: Project specific css can be added to a provide file to keep the main CSS form clean:
+<code>html
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/onetrueform-custom.css&quot;&gt;     
+</code></p>
+
+<h4 id="markup">Markup</h4>
+
+<pre><code class="html">&lt;div id=&quot;oneTrueForm&quot; class=&quot;[vertical/horizontal] [no-content]&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;
+        &lt;div class=&quot;section&quot;&gt;
             Content Area
-        </div>
-    </div>
-    <div class="form">
-        <div class="section-container">
-            <div class="section">
-                <h3>Section 1</h3>
-            </div>
-        </div>
-        <div class="section-container">
-            <div class="section">
-                <h3>Section 2</h3>
-            </div>
-        </div>
-        <div class="section-container">
-            <div class="section">
-                <h3>Section 3</h3>
-            </div>
-        </div>
-    </div>
-</div>
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form&quot;&gt;
+        &lt;div class=&quot;section-container&quot;&gt;
+            &lt;div class=&quot;section&quot;&gt;
+                &lt;h3&gt;Section 1&lt;/h3&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;section-container&quot;&gt;
+            &lt;div class=&quot;section&quot;&gt;
+                &lt;h3&gt;Section 2&lt;/h3&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;section-container&quot;&gt;
+            &lt;div class=&quot;section&quot;&gt;
+                &lt;h3&gt;Section 3&lt;/h3&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h5 id="customizationwithclasses">Customization with Classes</h5>
+
+<pre><code class="html">&lt;div id=&quot;oneTrueForm&quot; class=&quot;[vertical/horizontal] [no-content]&quot;&gt;
+</code></pre>
+
+<h6 id="requiredverticalorhorizontalclass">Required Vertical or Horizontal Class</h6>
+
+<p>Either <code>.vertical</code> or <code>.horizontal</code> is required and specifies if a vertical or horiztonal layout will be used.</p>
+
+<h6 id="optionalnocontentclass">Optional No Content Class</h6>
+
+<p>Optionally a <code>.no-content</code> class may be added. This adjusts the layout to account for an implementation without a content area. If this flag is used it is reccomended you do not include the <code>.content</code> div, however, if a <code>.content</code> div is present this class will force it to be hidden</p>
+
+<h4 id="generallayout">General Layout</h4>
+
+<h5 id="verticallayout">Vertical Layout</h5>
+
+<p>Window Width Greater than 768px
+- OneTrueForm Container: 100% of parent
+ - Left (form) column: 33% of parent
+ - Right (content) column: 66% of parent</p>
+
+<p>Window Width Less than 768px (tablet to mobile)
+- OneTrueForm Container: 100% of parent
+ - Top (content) column: 100% of parent
+ - Bottom (form) column: 100% of parent</p>
+
+<h5 id="verticallayoutwithoutcontent">Vertical Layout without Content</h5>
+
+<p>Window Width Greater than 768px
+- OneTrueForm Container: 33% of parent
+ - Left (form) column: 100% of parent</p>
+
+<p>Window Width Less than 768px (tablet to mobile)
+- OneTrueForm Container: 100% of parent
+ - Left (form) column: 100% of parent</p>
+
+<h5 id="horiztonallayout">Horiztonal Layout</h5>
+
+<p>Window Width Greater than 768px
+- OneTrueForm Container: 100% of parent
+ - Top (content) column: 100% of parent
+ - Bottom (form) column: 100% of parent</p>
+
+<p>Window Width Less than 768px (tablet to mobile)
+- OneTrueForm Container: 100% of parent
+ - Top (content) column: 100% of parent
+ - Bottom (form) column: 100% of parent</p>
+
+<h3 id="advancedusage">Advanced Usage</h3>
+
+<h4 id="sassvariables">SASS Variables</h4>
+
+<pre><code class="sass">$breakpoint-tablet: 768px;
+</code></pre>
+
+<p>Breakpoint for tablet down to mobile views</p>
+
+<pre><code class="sass">$vertical-form-width: 33%;
+</code></pre>
+
+<p>Releavant to vertical forms only. This is the width of form section for vertical form. Content width is calculated from this.
+If <code>.no-content</code> class is used the entire <code>oneTrueForm</code> container will become with width.</p>
 
 </body>
 </html>

@@ -20,7 +20,6 @@
     box-sizing: border-box; }
 
   #oneTrueForm {
-    min-width: 960px;
     padding: 5px 5px;
     overflow: auto; } }
   @media screen and (min-width: 0px) {
@@ -59,15 +58,6 @@
     #oneTrueForm.horizontal .section-container {
       width: 33.3%;
       float: left; } }
-@media screen and (max-width: 960px) {
-  #oneTrueForm.vertical .form {
-    width: 38%; }
-  #oneTrueForm.vertical .content {
-    width: 62%; }
-  #oneTrueForm.vertical.no-content {
-    width: 100%; }
-    #oneTrueForm.vertical.no-content .content {
-      display: none !important; } }
 @media screen and (max-width: 768px) {
   #oneTrueForm.vertical, #oneTrueForm.horizontal {
     clear: both;
@@ -81,4 +71,6 @@
     #oneTrueForm.vertical .section-container, #oneTrueForm.horizontal .section-container {
       clear: both;
       float: none !important;
-      width: 100% !important; } }
+      width: 100% !important; }
+    #oneTrueForm.vertical.no-content, #oneTrueForm.horizontal.no-content {
+      width: 100%; } }
