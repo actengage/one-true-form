@@ -4,12 +4,16 @@
 
 ####CSS
 Link to external css:
-```html
+```
 <link rel="stylesheet" href="css/onetrueform.css">     
 ```
 
-Optional: Project specific css can be added to a provide file to keep the main CSS form clean:
 ```html
+<div id="oneTrueForm" class="[vertical/horizontal] [no-content]">
+```
+
+Optional: Project specific css can be added to a provide file to keep the main CSS form clean:
+```
 <link rel="stylesheet" href="css/onetrueform-custom.css">     
 ```
 
