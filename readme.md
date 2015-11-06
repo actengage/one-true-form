@@ -57,9 +57,9 @@ Optionally a `.no-content` class may be added. This adjusts the layout to accoun
 
 #####Vertical Layout
 Window Width Greater than 768px
-- OneTrueForm Container: 100% of parent
-	- Left (form) column: 33% of parent
-	- Right (content) column: 66% of parent
+* OneTrueForm Container: 100% of parent
+	* Left (form) column: 33% of parent
+	* Right (content) column: 66% of parent
 
 Window Width Less than 768px (tablet to mobile)
 - OneTrueForm Container: 100% of parent
