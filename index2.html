@@ -23,7 +23,7 @@
 
 
         
-        <div id="oneTrueForm" class="vertical fluid">
+        <div id="oneTrueForm" class="horizontal fluid">
             <div class="content">
                 <div class="section">
                     <h3>Content Area</h3>
@@ -45,7 +45,7 @@
                 <fieldset class="section-container">
                     <div class="section">
                         <legend>Select your donation amount</legend>                                                
-                        <div id="donation-amount" class="input_group">
+                        <div id="donation-amount" class="input_group ">
                             <label for="donation" class="standard donation-amount">Donation Amount</label>
                             <div class="input_row donation_amount">                            
                                 <ul class="radio_list">
@@ -117,32 +117,34 @@
                 <fieldset class="section-container">
                     <div class="section">
                         <legend>Your information</legend>
-                        <div id="first-name" class="input_group">
+                        <div id="first-name" class="input_group ">
                             <label for="first-name" class="standard">First Name</label>
                             <div class="input_row">                            
                                 <input type="text" name="first-name" placeholder="First Name">
                             </div>
                         </div>
-                        <div id="last-name" class="input_group">
+                        <div id="last-name" class="input_group ">
                             <label for="last-name" class="standard">Last Name</label>
                             <div class="input_row">                            
                                 <input type="text" name="last-name" placeholder="Last Name">
                             </div>
                         </div>
-                        <div id="email-address" class="input_group">
+                        <div id="email-address" class="input_group ">
                             <label for="email-address" class="standard">Email Address</label>
                             <div class="input_row">                            
                                 <input type="email" name="email-address" placeholder="Email Address">
                             </div>
                         </div>
-                        <div id="address" class="input_group_multi">
+                        <div id="address" class="input_group_multi ">
                             <label for="address" class="standard">Address</label>
                             <div class="input_row">                                                         
-                                <label for="street-address" class="sr-only">Street Address</label>
-                                <input type="text" name="street-address" placeholder="Street Address">                              
+                                <div class="adddress_street ">  
+                                    <label for="street-address" class="sr-only">Street Address</label>
+                                    <input type="text" name="street-address" placeholder="Street Address">                              
+                                </div>
                             </div>
                             <div class="input_row">                                                             
-                                <div class="address_state">        
+                                <div class="address_state ">        
                                     <div class=" custom-select">
                                         <label for="state" class="sr-only">State</label>
                                         <select id="states" name="sate">
@@ -154,7 +156,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="address_zip">        
+                                <div class="address_zip ">        
                                     <label for="zip" class="sr-only">ZIP</label>
                                     <input type="text" name="zip" placeholder="ZIP">
                                 </div>                                      
@@ -188,23 +190,23 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="input_group_multi">
+                        <div class="input_group_multi ">
                             <label for="cc-number" class="standard">Credit Card Number</label>
                             <div class="input_row">
-                                <div class="cc_number">
+                                <div class="cc_number ">
                                     <label for="cc-number" class="sr-only">Credit Card Number</label>
                                     <input type="text" name="cc-number" placeholder="Credit Card Number">
                                 </div>        
-                                <div class="cc_ccv2">
+                                <div class="cc_ccv2 ">
                                     <label for="cc-ccv2" class="sr-only">CCV2</label>
                                     <input type="text" name="cc-ccv2" placeholder="CCV2">
                                 </div>                   
                             </div>  
                         </div>   
-                        <div class="input_group_multi">
+                        <div class="input_group_multi ">
                             <label for="cc-exp" class="standard">Credit Card Expiration</label>
                             <div class="input_row">
-                                <div class="cc_exp_mo">                                                        
+                                <div class="cc_exp_mo ">                                                        
                                     <div class=" custom-select">
                                         <label for="cc-exp-mo" class="sr-only">Expiration Date Month</label>
                                         <select id="cc-exp-mo" name="cc-exp-mo">
@@ -224,7 +226,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="cc_exp_year">     
+                                <div class="cc_exp_year ">     
                                     <div class=" custom-select">
                                         <label for="cc-exp-year" class="sr-only">Expiration Date Year</label>
                                         <select id="cc-exp-year" name="cc-exp-year">
@@ -236,7 +238,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>                        
+                        </div>
+                        
                         <div class="input_row ">
                             <div class="button submit">
                                 Donate Now

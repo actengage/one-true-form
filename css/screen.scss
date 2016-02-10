@@ -1,19 +1,14 @@
 /*This file is for presentation of the demo only and unrequired for usage*/
-#wrapper.contained{ 
-		width:1020px;
-		margin:0 auto;
-	}
 
-@media (min-width: 0px){
-	#wrapper.contained{ 
-		width:100%;
-		max-width:1020px !important;
-		margin:0 auto;
-	}
+html,body{
+	margin:0;
+	padding:0;
 }
 
-
-
+#wrapper.contained{ 
+	/*max-width:1020px;*/
+	margin:0 auto;
+}
 
 #wrapper.uncontained{
 	width:100%;
@@ -46,6 +41,17 @@ h3{
 }
 
 .section{
-	min-height:200px;
+	/*min-height:200px;*/
 }
 
+#nav{
+	background:#666;
+	
+
+	a{
+		display: inline-block;
+		color:#fff;
+		text-decoration: none;
+		padding:6px 12px;
+	}
+}

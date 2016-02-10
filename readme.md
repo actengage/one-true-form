@@ -4,14 +4,11 @@
 
 ####CSS
 Link to external css:
-
-
 ```html
 <link rel="stylesheet" href="css/onetrueform.css">     
 ```
 
 Optional: Project specific css can be added to a provide file to keep the main CSS form clean:
-
 ```html
 <link rel="stylesheet" href="css/onetrueform-custom.css">     
 ```
@@ -60,9 +57,9 @@ Optionally a `.no-content` class may be added. This adjusts the layout to accoun
 
 #####Vertical Layout
 Window Width Greater than 768px
-* OneTrueForm Container: 100% of parent
-	* Left (form) column: 33% of parent
-	* Right (content) column: 66% of parent
+- OneTrueForm Container: 100% of parent
+	- Left (form) column: 33% of parent
+	- Right (content) column: 66% of parent
 
 Window Width Less than 768px (tablet to mobile)
 - OneTrueForm Container: 100% of parent
