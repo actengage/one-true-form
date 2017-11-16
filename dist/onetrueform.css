@@ -1,91 +1,90 @@
 /*basic form layout*/
-#oneTrueForm {
+.one-true-form {
   box-sizing: border-box;
   overflow: auto;
   padding: 5px 5px;
   margin: 0 auto;
   width: 100%; }
-  #oneTrueForm .form {
+  .one-true-form .form {
     /*customs*/ }
-    #oneTrueForm .form .section-container {
+    .one-true-form .form .section-container {
       display: block;
       padding: 10px;
       overflow: auto;
       border: 0;
       margin: 0; }
-    #oneTrueForm .form legend {
+    .one-true-form .form legend {
       margin-bottom: 18px;
       font-size: 18px;
       font-weight: bold;
       font-weight: 600;
       border-bottom: 1px solid #ccc;
       width: 100%; }
-    #oneTrueForm .form label {
+    .one-true-form .form label {
       font-weight: bold;
       margin-bottom: 6px;
       display: block;
       font-size: 14px; }
-      #oneTrueForm .form label.donation-amount {
+      .one-true-form .form label.donation-amount {
         display: none; }
-    #oneTrueForm .form .input_row {
+    .one-true-form .form .input_row {
       margin-bottom: 12px;
       width: 100%;
       float: left; }
-    #oneTrueForm .form .address_state {
+    .one-true-form .form .address_state {
       width: 70%;
       float: left;
       padding-right: 6px;
       margin-bottom: 12px; }
-    #oneTrueForm .form .address_zip {
+    .one-true-form .form .address_zip {
       width: 30%;
       float: left;
       padding-left: 6px; }
-    #oneTrueForm .form .cc_number {
+    .one-true-form .form .cc_number {
       width: 70%;
       float: left;
       margin-bottom: 12px;
       padding-right: 6px; }
-    #oneTrueForm .form .cc_ccv2 {
+    .one-true-form .form .cc_ccv2 {
       width: 30%;
       float: left;
       padding-left: 6px; }
-    #oneTrueForm .form .cc_exp_year {
+    .one-true-form .form .cc_exp_year {
       width: 30%;
       float: left;
       padding-left: 6px; }
-    #oneTrueForm .form .cc_exp_mo {
+    .one-true-form .form .cc_exp_mo {
       width: 70%;
       float: left;
       padding-right: 6px; }
-    #oneTrueForm .form .donation_amount {
+    .one-true-form .form .donation_amount {
       width: 100%;
       margin: 0 0 12px; }
-      #oneTrueForm .form .donation_amount .radio_list {
+      .one-true-form .form .donation_amount .radio_list {
         list-style: none;
         padding: 0;
         width: 30%;
         margin: 0 10%;
         float: left; }
-        #oneTrueForm .form .donation_amount .radio_list li {
+        .one-true-form .form .donation_amount .radio_list li {
           margin-bottom: 6px; }
-          #oneTrueForm .form .donation_amount .radio_list li label {
+          .one-true-form .form .donation_amount .radio_list li label {
             font-size: 16px;
             display: inline;
             padding: 0;
             margin: 0;
             font-weight: normal; }
-    #oneTrueForm .form .custom_amount {
+    .one-true-form .form .custom_amount {
       width: 100%; }
-      #oneTrueForm .form .custom_amount label {
+      .one-true-form .form .custom_amount label {
         width: 40%;
         float: left;
         margin: 0 0  0 10%;
         line-height: 32px; }
-      #oneTrueForm .form .custom_amount input {
-        width: 40% !important;
-        /*margin:0 10%;*/
-        float: left; }
-    #oneTrueForm .form .button {
+      .one-true-form .form .custom_amount input {
+        float: left;
+        width: 40% !important; }
+    .one-true-form .form .button {
       margin-top: 0;
       width: 100%;
       border-radius: 3px;
@@ -94,69 +93,68 @@
       font-size: 16px;
       text-align: center;
       margin-bottom: 6px;
-      -webkit-transition: all .08s ease-in;
       transition: all .08s ease-in; }
-      #oneTrueForm .form .button.submit, #oneTrueForm .form .button.active {
+      .one-true-form .form .button.submit, .one-true-form .form .button.active {
         background: #428bca;
         border-color: #357ebd;
         color: #fff; }
-      #oneTrueForm .form .button.submit {
+      .one-true-form .form .button.submit {
         margin-top: 12px;
         padding: 12px; }
-      #oneTrueForm .form .button.submit:hover {
+      .one-true-form .form .button.submit:hover {
         background: #3276b1;
         border-color: #285e8e; }
-      #oneTrueForm .form .button.submit:active {
+      .one-true-form .form .button.submit:active {
         box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
-    #oneTrueForm .form .toggle_button .button {
+    .one-true-form .form .toggle_button .button {
       cursor: pointer;
       width: 50%;
       float: left;
       background: #cccccc;
       border: #b3b3b3;
       color: #fff; }
-      #oneTrueForm .form .toggle_button .button:hover {
+      .one-true-form .form .toggle_button .button:hover {
         background: #659c31;
         border-color: #59882b; }
-      #oneTrueForm .form .toggle_button .button.active {
+      .one-true-form .form .toggle_button .button.active {
         background: #72af37;
         border-color: #59882b; }
-      #oneTrueForm .form .toggle_button .button.active:hover {
+      .one-true-form .form .toggle_button .button.active:hover {
         background: #659c31;
         border-color: #59882b; }
-    #oneTrueForm .form .toggle_button .button:nth-child(1) {
+    .one-true-form .form .toggle_button .button:nth-child(1) {
       border-radius: 3px 0 0 3px;
       border-right: 0; }
-    #oneTrueForm .form .toggle_button .button:nth-child(2) {
+    .one-true-form .form .toggle_button .button:nth-child(2) {
       border-radius: 0 3px 3px 0px;
       border-left: 0; }
-    #oneTrueForm .form .note {
+    .one-true-form .form .note {
       font-size: 12px;
       margin-bottom: 0; }
-    #oneTrueForm .form .checkbox {
+    .one-true-form .form .checkbox {
       list-style: none;
       padding: 0;
       width: 100%;
       margin: 0;
       float: left; }
-      #oneTrueForm .form .checkbox label {
+      .one-true-form .form .checkbox label {
         font-size: 16px;
         display: inline;
         padding: 0;
         margin: 0;
         font-weight: normal; }
-    #oneTrueForm .form input {
+    .one-true-form .form input {
       box-shadow: none;
       margin: 0; }
-    #oneTrueForm .form input[type="radio"] {
+    .one-true-form .form input[type="radio"] {
       margin: 0 6px 0 0;
       height: 16px;
       padding: 0; }
-    #oneTrueForm .form input[type="checkbox"] {
+    .one-true-form .form input[type="checkbox"] {
       margin: 0 6px 0 0;
       height: 16px;
       padding: 0; }
-    #oneTrueForm .form input[type="text"], #oneTrueForm .form input[type="email"] {
+    .one-true-form .form input[type="text"], .one-true-form .form input[type="email"] {
       margin-top: 0;
       width: 100%;
       border-radius: 3px;
@@ -164,42 +162,41 @@
       padding: 6px 12px;
       font-size: 16px;
       box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.05); }
-    #oneTrueForm .form select {
+    .one-true-form .form select {
       width: 100%;
       padding: 6px 30px 6px 12px;
       font-size: 16px; }
-  #oneTrueForm .payment_selector {
+  .one-true-form .payment_selector {
     margin: 12px 0 6px;
     overflow: auto; }
-    #oneTrueForm .payment_selector div {
+    .one-true-form .payment_selector div {
       opacity: .60;
       text-align: center;
       width: 25%;
       float: left;
-      -webkit-transition: opacity .08s ease-in;
       transition: opacity .08s ease-in; }
-      #oneTrueForm .payment_selector div img {
+      .one-true-form .payment_selector div img {
         display: block;
         width: 40px;
         max-width: 40px;
         margin: 0 auto; }
-      #oneTrueForm .payment_selector div span {
+      .one-true-form .payment_selector div span {
         font-weight: bold;
         display: block;
         font-size: 12px;
         margin-top: 6px; }
-      #oneTrueForm .payment_selector div.active, #oneTrueForm .payment_selector div:hover {
+      .one-true-form .payment_selector div.active, .one-true-form .payment_selector div:hover {
         opacity: 1; }
-  #oneTrueForm .content {
+  .one-true-form .content {
     padding: 5px; }
 
 @media (min-width: 414px) and (max-width: 768px) {
-  #oneTrueForm .section-container {
+  .one-true-form .section-container {
     max-width: none !important; }
-  #oneTrueForm .form .address_state {
+  .one-true-form .form .address_state {
     width: 70%;
     padding-right: 6px; }
-  #oneTrueForm .form label.standard {
+  .one-true-form .form label.standard {
     padding-right: 12px;
     width: 30%;
     float: left;
@@ -207,95 +204,97 @@
     /*line-height: 32px;*/
     padding-top: 6px;
     margin-bottom: 14px; }
-    #oneTrueForm .form label.standard.donation-amount {
+    .one-true-form .form label.standard.donation-amount {
       display: block; }
-  #oneTrueForm .form .input_row, #oneTrueForm .form .note, #oneTrueForm .form .error_text {
+  .one-true-form .form .input_row, .one-true-form .form .note, .one-true-form .form .error_text {
     width: 70%;
     float: right; }
-  #oneTrueForm .form .note {
+  .one-true-form .form .note {
     margin-top: 0; }
-  #oneTrueForm .form .payment_selector {
+  .one-true-form .form .payment_selector {
     margin-top: 0; } }
+
 @media (min-width: 768px) {
-  #oneTrueForm.vertical {
+  .one-true-form.vertical {
     clear: both;
     width: 33%;
     margin: 0;
     width: 100% !important;
     max-width: none; }
-    #oneTrueForm.vertical .form {
+    .one-true-form.vertical .form {
       width: 33%;
       float: left; }
-      #oneTrueForm.vertical .form .address_state {
+      .one-true-form.vertical .form .address_state {
         width: 100%;
         padding-right: 0px; }
-      #oneTrueForm.vertical .form .address_zip {
+      .one-true-form.vertical .form .address_zip {
         width: 100%;
         padding-left: 0px; }
-      #oneTrueForm.vertical .form .cc_number {
+      .one-true-form.vertical .form .cc_number {
         width: 100%;
         padding-right: 0px; }
-      #oneTrueForm.vertical .form .cc_ccv2 {
+      .one-true-form.vertical .form .cc_ccv2 {
         width: 100%;
         padding-left: 0px; }
-      #oneTrueForm.vertical .form .cc_exp_year {
+      .one-true-form.vertical .form .cc_exp_year {
         width: 50%;
         padding-left: 6px; }
-      #oneTrueForm.vertical .form .cc_exp_mo {
+      .one-true-form.vertical .form .cc_exp_mo {
         width: 50%;
         padding-right: 6px; }
-    #oneTrueForm.vertical .content {
+    .one-true-form.vertical .content {
       width: 67%;
       float: right; }
-    #oneTrueForm.vertical .section-container {
+    .one-true-form.vertical .section-container {
       clear: both;
       float: none !important;
       width: 100% !important;
       max-width: 480px;
       margin: 0 auto; }
-
-  #oneTrueForm.horizontal {
+  .one-true-form.horizontal {
     max-width: none; }
-    #oneTrueForm.horizontal .form .section-container {
+    .one-true-form.horizontal .form .section-container {
       width: 33%;
       float: left; }
-    #oneTrueForm.horizontal .form .address_state {
+    .one-true-form.horizontal .form .address_state {
       width: 100%;
       padding-right: 0px; }
-    #oneTrueForm.horizontal .form .address_zip {
+    .one-true-form.horizontal .form .address_zip {
       width: 100%;
       padding-left: 0px; }
-    #oneTrueForm.horizontal .form .cc_number {
+    .one-true-form.horizontal .form .cc_number {
       width: 100%;
       padding-right: 0px; }
-    #oneTrueForm.horizontal .form .cc_ccv2 {
+    .one-true-form.horizontal .form .cc_ccv2 {
       width: 100%;
       padding-left: 0px; }
-    #oneTrueForm.horizontal .form .cc_exp_year {
+    .one-true-form.horizontal .form .cc_exp_year {
       width: 50%;
       padding-left: 6px; }
-    #oneTrueForm.horizontal .form .cc_exp_mo {
+    .one-true-form.horizontal .form .cc_exp_mo {
       width: 50%;
       padding-right: 6px; } }
+
 @media (min-width: 960px) {
-  #oneTrueForm.vertical .form .address_state, #oneTrueForm.horizontal .form .address_state {
+  .one-true-form.vertical .form .address_state, .one-true-form.horizontal .form .address_state {
     width: 70%;
     padding-right: 6px; }
-  #oneTrueForm.vertical .form .address_zip, #oneTrueForm.horizontal .form .address_zip {
+  .one-true-form.vertical .form .address_zip, .one-true-form.horizontal .form .address_zip {
     width: 30%;
     padding-left: 6px; }
-  #oneTrueForm.vertical .form .cc_number, #oneTrueForm.horizontal .form .cc_number {
+  .one-true-form.vertical .form .cc_number, .one-true-form.horizontal .form .cc_number {
     width: 70%;
     padding-right: 6px; }
-  #oneTrueForm.vertical .form .cc_ccv2, #oneTrueForm.horizontal .form .cc_ccv2 {
+  .one-true-form.vertical .form .cc_ccv2, .one-true-form.horizontal .form .cc_ccv2 {
     width: 30%;
     padding-left: 6px; }
-  #oneTrueForm.vertical .form .cc_exp_year, #oneTrueForm.horizontal .form .cc_exp_year {
+  .one-true-form.vertical .form .cc_exp_year, .one-true-form.horizontal .form .cc_exp_year {
     width: 30%;
     padding-left: 6px; }
-  #oneTrueForm.vertical .form .cc_exp_mo, #oneTrueForm.horizontal .form .cc_exp_mo {
+  .one-true-form.vertical .form .cc_exp_mo, .one-true-form.horizontal .form .cc_exp_mo {
     width: 70%;
     padding-right: 6px; } }
+
 .input_group.error {
   color: #e02233; }
   .input_group.error label {
@@ -323,6 +322,7 @@
 
 .input_group_multi.error label {
   color: #e02233; }
+
 .input_group_multi.error .error {
   color: #e02233; }
   .input_group_multi.error .error label {
@@ -375,7 +375,6 @@ input:focus {
   border-radius: 3px;
   border: 1px solid #ccc;
   padding: 0;
-  background: -webkit-linear-gradient(#fff, #ccc);
   background: linear-gradient(#fff, #ccc); }
 
 /* This is the native select, we're making everything but the text invisible so we can see the button styles in the wrapper */
@@ -386,10 +385,11 @@ input:focus {
   border: 0;
   outline: none;
   /* Prefixed box-sizing rules necessary for older browsers */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* Remove select styling */
-  -moz-appearance: none;
-       appearance: none;
+  appearance: none;
   -webkit-appearance: none;
   /* Font size must the 16px or larger to prevent iOS page zoom on focus */
   font-size: 1em;
@@ -444,19 +444,20 @@ x:-o-prefocus, .custom-select::after {
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .custom-select select::-ms-expand {
     display: none; }
-
   .custom-select select:focus::-ms-value {
     background: transparent;
     color: #222; } }
+
 /* FIREFOX won't let us hide the native select arrow, so we have to make it wider than needed and clip it via overflow on the parent container. The percentage width is a fallback since FF 4+ supports calc() so we can just add a fixed amount of extra width to push the native arrow out of view. We're applying this hack across all FF versions because all the previous hacks were too fragile and complex. You might want to consider not using this hack and using the native select arrow in FF. Note this makes the menus wider than the select button because they display at the specified width and aren't clipped. Targeting hack via http://browserhacks.com/#hack-758bff81c5c32351b02e10480b5ed48e */
 /* Show only the native arrow */
 @-moz-document url-prefix() {
   .custom-select {
     overflow: hidden; }
-
   .custom-select select {
     width: 120%;
+    width: -moz-calc(100% + 3em);
     width: calc(100% + em); } }
+
 /* Firefox focus has odd artifacts around the text, this kills that. See https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-focusring */
 .custom-select select:-moz-focusring {
   color: transparent;
