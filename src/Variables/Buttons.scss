@@ -1,0 +1,35 @@
+$btn-padding-y: .7rem;
+$btn-padding-x: 1rem;
+$btn-font-size: 16px;
+$btn-border-radius: 3px;
+$btn-border-size: 1px;
+$btn-border-style: solid;
+$btn-border: 1px solid transparent;
+
+$btn-primary-color: $white;
+$btn-primary-bgcolor: $blue;
+$btn-primary-border-color: darken($blue, 5%);
+
+$btn-secondary-color: $black;
+$btn-secondary-bgcolor: $white;
+$btn-secondary-border-color: lighten($gray, 20%);
+
+$btn-success-color: $white;
+$btn-success-bgcolor: $green;
+$btn-success-border-color: darken($btn-success-bgcolor, 5%);
+
+$btn-info-color: $white;
+$btn-info-bgcolor: $indigo;
+$btn-info-border-color: darken($btn-info-bgcolor, 5%);
+
+$btn-warning-color: $white;
+$btn-warning-bgcolor: $yellow;
+$btn-warning-border-color: darken($btn-warning-bgcolor, 5%);
+
+$btn-danger-color: $white;
+$btn-danger-bgcolor: $red;
+$btn-danger-border-color: darken($btn-danger-bgcolor, 5%);
+
+$btn-link-color: $link;
+$btn-link-bgcolor: transparent;
+$btn-link-border-color: transparent;

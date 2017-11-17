@@ -1,0 +1,105 @@
+/*
+ * ./Devices/Tablet.scss
+ * Define rules for table devices
+ */
+
+@media (min-width: $breakpoint-tablet) {
+	.one-true-form.vertical {
+		clear:both;
+		width: $vertical-form-width;
+		margin:0;
+		width: 100% !important;
+		max-width:none;
+
+		.form {
+			width: $vertical-form-width;
+			float:left;
+
+			.address_state {
+				width:100%;
+				padding-right:0px;
+			}
+
+			.address_zip {
+				width:100%;
+				padding-left:0px;
+			}
+
+			.cc_number {
+				width:100%;
+				padding-right:0px;
+			}
+
+			.cc_ccv2 {
+				width:100%;
+				padding-left:0px;
+			}
+
+			.cc_exp_year {
+				width:50%;
+				padding-left:6px;
+			}
+
+			.cc_exp_mo {
+				width:50%;
+				padding-right:6px;
+			}
+		}
+
+		.content {
+			width:100% - $vertical-form-width;
+			float:right;
+		}
+
+		.section-container {
+			clear:both;
+			float:none !important;
+			width:100% !important;
+			max-width:480px;
+			margin:0 auto;
+		}
+	}
+
+	.one-true-form.horizontal {
+		max-width:none;
+
+		.form {
+
+			.section-container {
+				width:33%;
+				float:left;
+
+			}
+
+			.address_state {
+				width:100%;
+				padding-right:0px;
+			}
+
+			.address_zip {
+				width:100%;
+				padding-left:0px;
+			}
+
+			.cc_number {
+				width:100%;
+				padding-right:0px;
+			}
+
+			.cc_ccv2 {
+				width:100%;
+				padding-left:0px;
+			}
+
+			.cc_exp_year {
+				width:50%;
+				padding-left:6px;
+			}
+
+			.cc_exp_mo {
+				width:50%;
+				padding-right:6px;
+			}
+		}
+	}
+}
