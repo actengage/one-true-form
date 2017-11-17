@@ -20,13 +20,39 @@
                 text-align: center;
                 color: white;
             }
+
+            p > b {
+                background-color: cornsilk;
+                padding: 5px
+            }
         </style>
     </head>
     <body>
 
         <div class="container">
             <div class="row">
-                <div class="col-12"><h1>Grid</h1></div>
+                <div class="col-12">
+                    <h1>Grid</h1>
+
+                    <p>
+                        Visible Viewport Size:
+
+                        <b class="show-xs">Extra Small</b>
+                        <b class="show-sm">Small</b>
+                        <b class="show-md">Medium</b>
+                        <b class="show-lg">Large</b>
+                        <b class="show-xl">Extra Large</b>
+                    </p>
+                    <p class="commas">
+                        Hidden Viewport Sizes:
+
+                        <b class="hide-xs">Extra Small</b>
+                        <b class="hide-sm">Small</b>
+                        <b class="hide-md">Medium</b>
+                        <b class="hide-lg">Large</b>
+                        <b class="hide-xl">Extra Large</b>
+                    </p>
+                </div>
             </div>
             <div class="row">
                 <div class="col-12"><span>12</span></div>
