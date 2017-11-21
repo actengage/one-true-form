@@ -1,48 +1,4 @@
 
-@mixin form-control-size($size, $modifier:1) {
-    &.form-control-#{$size} {
-        font-size: $form-control-font-size * $modifier;
-        border-radius: $form-control-border-radius * $modifier;
-        padding: $form-control-padding-y * $modifier $form-control-padding-x * $modifier;
-    }
-
-    &.form-control-#{$size}:not([size]):not([multiple]) {
-        height: 2.375rem * $modifier;
-    }
-}
-
-@mixin custom-select-size($size, $modifier:1) {
-    &.custom-select-#{$size} {
-        font-size: $form-control-font-size * $modifier;
-        border-radius: $form-control-border-radius * $modifier;
-        padding: $form-control-padding-y * $modifier $form-control-padding-x * $modifier;
-
-        &:not([size]):not([multiple]) {
-            height: 2.375rem * $modifier;
-        }
-    }
-}
-
-@mixin custom-file-size($size, $modifier:1) {
-    &.custom-file-#{$size} {
-        .custom-file-input,
-        .custom-file-control {
-            height: $custom-file-height * $modifier;
-        }
-
-        .custom-file-control::before,
-        .custom-file-control::after {
-            font-size: $form-control-font-size * $modifier;
-        }
-
-        .custom-file-control::before {
-            height: $custom-file-height * $modifier;
-            padding: $custom-file-padding-y * $modifier $custom-file-padding-x * $modifier;
-            border-radius: 0 $custom-file-border-radius * $modifier $custom-file-border-radius * $modifier 0;
-        }
-    }
-}
-
 label {
     display: inline-block;
     margin-bottom: .5em;
@@ -79,6 +35,30 @@ label {
     @include form-control-size('xl', 1.5);
 }
 
+.col-form-label {
+    padding-top: $input-padding-y / 2;
+}
+
+.col-form-label-xs {
+    font-size: $input-font-size * .7;
+}
+.col-form-label-sm {
+    font-size: $input-font-size * .8;
+    height: ($input-font-size * .6) + ($input-padding-y * 2);
+}
+.col-form-label-md {
+    font-size: $input-font-size;
+    height: ($input-font-size * 1) + ($input-padding-y * 2);
+}
+.col-form-label-lg {
+    font-size: $input-font-size * 1.25;
+    height: ($input-font-size * 1.25) + ($input-padding-y * 2);
+}
+.col-form-label-xl {
+    font-size: $input-font-size * 1.5;
+    height: ($input-font-size * 1.5) + ($input-padding-y * 2);
+}
+
 select.form-control:not([size]):not([multiple]) {
     height: 2.375rem;
 }
@@ -109,68 +89,6 @@ select.form-control:not([size]):not([multiple]) {
     margin-top: .25rem;
     margin-left: -1.25rem;
 }
-
-@include form-validation-state("valid", $form-feedback-valid-color);
-@include form-validation-state("invalid", $form-feedback-invalid-color);
-
-
-/*
-.custom-select.is-valid,
-.form-control.is-valid,
-.was-validated .custom-select:valid,
-.was-validated .form-control:valid {
-    border-color: $green;
-}
-
-.valid-feedback {
-    display: none;
-    margin-top: 1rem * .45;
-    font-size: 1rem * .85;
-    color: $green;
-}
-
-.form-group.is-valid~.valid-feedback,
-.custom-select.is-valid~.valid-feedback,
-.custom-select.is-valid~.valid-tooltip,
-.form-control.is-valid~.valid-feedback,
-.form-control.is-valid~.valid-tooltip,
-.was-validated .custom-select:valid~.valid-feedback,
-.was-validated .custom-select:valid~.valid-tooltip,
-.was-validated .form-control:valid~.valid-feedback,
-.was-validated .form-control:valid~.valid-tooltip {
-    display: block;
-}
-
-.custom-select.is-invalid,
-.form-control.is-invalid,
-.was-validated .custom-select:invalid,
-.was-validated .form-control:invalid {
-    border-color: $red;
-}
-
-.custom-control-input.is-invalid~.custom-control-description,
-.was-validated .custom-control-input:invalid~.custom-control-description {
-    color: $red;
-}
-
-.invalid-feedback {
-    display: none;
-    margin-top: 1rem * .45;
-    font-size: 1rem * .85;
-    color: $red;
-}
-
-.custom-select.is-invalid~.invalid-feedback,
-.custom-select.is-invalid~.invalid-tooltip,
-.form-control.is-invalid~.invalid-feedback,
-.form-control.is-invalid~.invalid-tooltip,
-.was-validated .custom-select:invalid~.invalid-feedback,
-.was-validated .custom-select:invalid~.invalid-tooltip,
-.was-validated .form-control:invalid~.invalid-feedback,
-.was-validated .form-control:invalid~.invalid-tooltip {
-    display: block;
-}
-*/
 
 .custom-control {
   position: relative;
@@ -418,3 +336,6 @@ select.form-control:not([size]):not([multiple]) {
         transform: translateY(-50%);
     }
 }
+
+@include form-validation-state("valid", $form-feedback-valid-color);
+@include form-validation-state("invalid", $form-feedback-invalid-color);

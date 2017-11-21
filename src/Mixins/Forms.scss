@@ -1,3 +1,48 @@
+
+@mixin form-control-size($size, $modifier:1) {
+    &.form-control-#{$size} {
+        font-size: $form-control-font-size * $modifier;
+        border-radius: $form-control-border-radius * $modifier;
+        padding: $form-control-padding-y * $modifier $form-control-padding-x * $modifier;
+    }
+
+    &.form-control-#{$size}:not([size]):not([multiple]) {
+        height: 2.375rem * $modifier;
+    }
+}
+
+@mixin custom-select-size($size, $modifier:1) {
+    &.custom-select-#{$size} {
+        font-size: $form-control-font-size * $modifier;
+        border-radius: $form-control-border-radius * $modifier;
+        padding: $form-control-padding-y * $modifier $form-control-padding-x * $modifier;
+
+        &:not([size]):not([multiple]) {
+            height: 2.375rem * $modifier;
+        }
+    }
+}
+
+@mixin custom-file-size($size, $modifier:1) {
+    &.custom-file-#{$size} {
+        .custom-file-input,
+        .custom-file-control {
+            height: $custom-file-height * $modifier;
+        }
+
+        .custom-file-control::before,
+        .custom-file-control::after {
+            font-size: $form-control-font-size * $modifier;
+        }
+
+        .custom-file-control::before {
+            height: $custom-file-height * $modifier;
+            padding: $custom-file-padding-y * $modifier $custom-file-padding-x * $modifier;
+            border-radius: 0 $custom-file-border-radius * $modifier $custom-file-border-radius * $modifier 0;
+        }
+    }
+}
+
 @mixin form-validation-state($state, $color) {
 
     .#{$state}-feedback {
