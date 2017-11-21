@@ -2078,6 +2078,9 @@ select.form-control:not([size]):not([multiple]) {
   width: 100%;
   max-width: 100%; }
 
+.img-block {
+  display: block; }
+
 /*@import "Form";*/
 /*
  * ./BrowserHacks.scss
