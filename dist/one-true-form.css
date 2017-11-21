@@ -935,6 +935,67 @@ select.form-control:not([size]):not([multiple]) {
 .was-validated .custom-file-input:invalid:focus, .custom-file-input.is-invalid:focus {
   box-shadow: 0 0 0 0.2rem rgba(180, 19, 39, 0.25); }
 
+.animated-control-label {
+  display: block;
+  position: relative;
+  height: 32px;
+  margin-top: 16px; }
+
+.animated-control-label > span {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 100%;
+  height: 100%;
+  font-weight: 300;
+  line-height: 32px;
+  color: #2b2723;
+  border-bottom: 1px solid #586A82;
+  transition: border-bottom-color 200ms ease-in-out;
+  cursor: text;
+  pointer-events: none; }
+
+.animated-control-label > span span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 0% 50%;
+  transition: transform 200ms ease-in-out;
+  cursor: text; }
+
+.animated-control-label .animated-form-control:focus + span span,
+.animated-control-label .animated-form-control.is-focused + span span,
+.animated-control-label .animated-form-control:not(.is-empty) + span span {
+  transform: scale(0.75) translateY(-24px);
+  cursor: default; }
+
+.animated-control-label .animated-form-control.is-focused + span {
+  border-bottom-color: #34D08C; }
+
+.animated-form-control {
+  background: transparent;
+  font-weight: 300;
+  border: 0;
+  outline: none;
+  cursor: text;
+  display: block;
+  width: 100%;
+  line-height: 32px;
+  padding-bottom: 3px;
+  transition: opacity 200ms ease-in-out; }
+
+.animated-form-control::-webkit-input-placeholder {
+  color: #8898AA; }
+
+.animated-form-control::-moz-placeholder {
+  color: #8898AA; }
+
+.animated-form-control:-ms-input-placeholder {
+  color: #424770; }
+
+.animated-form-control.is-empty:not(.is-focused):not(:focus) {
+  opacity: 0; }
+
 /*
 * ./Components/Grid.scss
 */
