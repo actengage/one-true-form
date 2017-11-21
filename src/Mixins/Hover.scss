@@ -1,4 +1,5 @@
-// stylelint-disable indentation
+// ./Mixins/Hover.scss
+
 @mixin hover {
     &:hover { @content; }
 }

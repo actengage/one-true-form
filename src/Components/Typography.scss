@@ -37,3 +37,31 @@ small, .small {
 .text-bold {
     font-weight: bold;
 }
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-xs {
+    font-size: $font-size-base * .7;
+}
+.text-sm {
+    font-size: $font-size-base * .8;
+}
+.text-md {
+    font-size: $font-size-base;
+}
+.text-lg {
+    font-size: $font-size-base * 1.25;
+}
+.text-xl {
+    font-size: $font-size-base * 1.5;
+}

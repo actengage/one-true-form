@@ -1,14 +1,16 @@
 @import "Mixins/Hover";
 @import "Mixins/Forms";
+@import "Mixins/Grid";
 
 @import "Helpers/Functions";
 @import "Helpers/Variables";
 @import "Helpers/Reboot";
 
 @import "Components/Typography";
-@import "Components/Grid";
 @import "Components/Buttons";
 @import "Components/Forms";
+@import "Components/Grid";
+@import "Components/Images";
 
 /*@import "Form";*/
 @import "BrowserHacks";

@@ -4,6 +4,15 @@ label {
     margin-bottom: .5em;
 }
 
+legend {
+    margin-bottom: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    font-weight: 600;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+}
+
 .form-group {
     margin-bottom: $form-group-margin-bottom;
 }
@@ -36,7 +45,8 @@ label {
 }
 
 .col-form-label {
-    padding-top: $input-padding-y / 2;
+    padding-top: $input-padding-y / 1.25;
+    margin-bottom: 0;
 }
 
 .col-form-label-xs {
