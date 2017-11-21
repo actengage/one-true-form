@@ -1,0 +1,31 @@
+// ./Mixins/Buttons.scss
+
+@mixin btn-color-rules($class, $color, $bg-color, $border-color) {
+    &.btn-#{$class} {
+        color: $color;
+        background-color: $bg-color;
+        border-color: $border-color;
+
+        &:active:focus {
+            box-shadow: 0 0 0 2px rgba($border-color, .5), 0 0 15px rgba(0, 0, 0, .33) inset;
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 2px rgba($border-color, .5);
+        }
+
+        &.active, &:hover {
+            background-color: darken($bg-color, 5%)
+        }
+
+        &.btn-outline {
+            background: transparent;
+            color: $border-color;
+
+            &:hover {
+                color: $color;
+                background-color: $bg-color;
+            }
+        }
+    }
+}

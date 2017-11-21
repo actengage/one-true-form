@@ -43,7 +43,8 @@ $red: #b41327;
 $orange: #bd5c2e;
 $yellow: #eeaf03;
 $green: #72af37;
-$blue: #428bca;
+//$blue: #428bca;
+$blue: #0275d8;
 $indigo: #5bc0de;
 $violet: #5f0f40;
 
@@ -192,8 +193,8 @@ $btn-primary-color: $white;
 $btn-primary-bgcolor: $blue;
 $btn-primary-border-color: darken($blue, 5%);
 
-$btn-secondary-color: $black;
-$btn-secondary-bgcolor: $white;
+$btn-secondary-color: $gray-800;
+$btn-secondary-bgcolor: $gray-200;
 $btn-secondary-border-color: lighten($gray-800, 20%);
 
 $btn-success-color: $white;

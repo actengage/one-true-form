@@ -1,6 +1,6 @@
 /*
- * ./Components/Buttons.scss
- */
+* ./Components/Buttons.scss
+*/
 
 .btn {
     display: inline-block;
@@ -13,6 +13,10 @@
     font-size: $btn-font-size;
     line-height: $btn-font-size;
     border: $btn-border;
+
+    &:focus {
+        outline: none;
+    }
 
     &.disabled,
     &:disabled {
@@ -55,125 +59,12 @@
         padding: ($btn-padding-y * 2.3) ($btn-padding-x * 2.3);
     }
 
-    &.btn-primary {
-        color: $btn-primary-color;
-        background-color: $btn-primary-bgcolor;
-        border-color: $btn-primary-border-color;
-
-        &.active, &:hover {
-            background-color: darken($btn-primary-bgcolor, 5%)
-        }
-
-        &.btn-outline {
-            background: transparent;
-            color: $btn-primary-bgcolor;
-
-            &:hover {
-                color: $btn-primary-color;
-                background-color: $btn-primary-bgcolor;
-            }
-        }
-    }
-
-    &.btn-secondary {
-        color: $btn-secondary-color;
-        background-color: $btn-secondary-bgcolor;
-        border-color: $btn-secondary-border-color;
-
-        &.active, &:hover {
-            background-color: darken($btn-secondary-bgcolor, 5%)
-        }
-
-        &.btn-outline {
-            background: transparent;
-            color: $btn-secondary-color;
-
-            &:hover {
-                color: $btn-secondary-bgcolor;
-                background-color: $btn-secondary-border-color;
-            }
-        }
-    }
-
-    &.btn-danger {
-        color: $btn-danger-color;
-        background-color: $btn-danger-bgcolor;
-        border-color: $btn-danger-border-color;
-
-        &.active, &:hover {
-            background-color: darken($btn-danger-bgcolor, 5%)
-        }
-
-        &.btn-outline {
-            background: transparent;
-            color: $btn-danger-bgcolor;
-
-            &:hover {
-                color: $btn-danger-color;
-                background-color: $btn-danger-bgcolor;
-            }
-        }
-    }
-
-    &.btn-success {
-        color: $btn-success-color;
-        background-color: $btn-success-bgcolor;
-        border-color: $btn-success-border-color;
-
-        &.active, &:hover {
-            background-color: darken($btn-success-bgcolor, 5%)
-        }
-
-        &.btn-outline {
-            background: transparent;
-            color: $btn-success-bgcolor;
-
-            &:hover {
-                color: $btn-success-color;
-                background-color: $btn-success-bgcolor;
-            }
-        }
-    }
-
-    &.btn-warning {
-        color: $btn-warning-color;
-        background-color: $btn-warning-bgcolor;
-        border-color: $btn-warning-border-color;
-
-        &.active, &:hover {
-            background-color: darken($btn-warning-bgcolor, 5%)
-        }
-
-        &.btn-outline {
-            background: transparent;
-            color: $btn-warning-bgcolor;
-
-            &:hover {
-                color: $btn-warning-color;
-                background-color: $btn-warning-bgcolor;
-            }
-        }
-    }
-
-    &.btn-info {
-        color: $btn-info-color;
-        background-color: $btn-info-bgcolor;
-        border-color: $btn-info-border-color;
-
-        &.active, &:hover {
-            background-color: darken($btn-info-bgcolor, 5%);
-        }
-
-        &.btn-outline {
-            background: transparent;
-            color: $btn-primary-bgcolor;
-
-            &:hover {
-                color: $btn-info-color;
-                background-color: $btn-info-bgcolor;
-            }
-        }
-    }
+    @include btn-color-rules('primary', $btn-primary-color, $btn-primary-bgcolor, $btn-primary-border-color);
+    @include btn-color-rules('secondary', $btn-secondary-color, $btn-secondary-bgcolor, $btn-secondary-border-color);
+    @include btn-color-rules('danger', $btn-danger-color, $btn-danger-bgcolor, $btn-danger-border-color);
+    @include btn-color-rules('success', $btn-success-color, $btn-success-bgcolor, $btn-success-border-color);
+    @include btn-color-rules('warning', $btn-warning-color, $btn-warning-bgcolor, $btn-warning-border-color);
+    @include btn-color-rules('info', $btn-info-color, $btn-info-bgcolor, $btn-info-border-color);
 }
 
 .btn-group {
@@ -210,30 +101,30 @@
 
     /* one item */
     .btn:first-child:nth-last-child(1) {
-    	width: 100%;
+        width: 100%;
     }
 
     /* two items */
     .btn:first-child:nth-last-child(2),
     .btn:first-child:nth-last-child(2) ~ .btn {
-    	width: 50%;
+        width: 50%;
     }
 
     /* three items */
     .btn:first-child:nth-last-child(3),
     .btn:first-child:nth-last-child(3) ~ .btn {
-    	width: 33.3333%;
+        width: 33.3333%;
     }
 
     /* four items */
     .btn:first-child:nth-last-child(4),
     .btn:first-child:nth-last-child(4) ~ .btn {
-    	width: 25%;
+        width: 25%;
     }
 
     /* five items */
     .btn:first-child:nth-last-child(5),
     .btn:first-child:nth-last-child(5) ~ .btn {
-    	width: 20%;
+        width: 20%;
     }
 }

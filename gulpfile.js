@@ -4,8 +4,13 @@ var rename = require('gulp-rename');
 
 gulp.task('sass', function () {
     return gulp.src(['./src/main.scss'])
-        .pipe(sass().on('error', sass.logError))
+        //.pipe(sourcemaps.init())
+        .pipe(sass({
+            sourceMapEmbed: true,
+            sourceMap: './dist/one-true-form.css.map'
+        }).on('error', sass.logError))
         .pipe(rename('one-true-form.css'))
+        //.pipe(sourcemaps.write())
         .pipe(gulp.dest('./dist'));
 });
 
