@@ -6,15 +6,10 @@
 @import "Helpers/Variables";
 @import "Helpers/Reboot";
 
-@import "Components/Typography";
-@import "Components/Buttons";
-@import "Components/Forms";
-@import "Components/Grid";
-@import "Components/Images";
-
-/*@import "Form";*/
-@import "BrowserHacks";
-
-@import "Devices/Tablet";
-@import "Devices/Desktop";
-@import "Devices/LargeMobile";
+.one-true-form {
+    @import "Components/Typography";
+    @import "Components/Buttons";
+    @import "Components/Forms";
+    @import "Components/Grid";
+    @import "Components/Images";
+}
