@@ -1,0 +1,11 @@
+// ./Helpers/Variables.scss
+
+@function str-replace($search, $replace, $string) {
+    $index: str-index($string, $search);
+
+    @if $index {
+        @return str-slice($string, 1, $index - 1) + $replace + str-replace($search, $replace, str-slice($string, $index + str-length($search)));
+    }
+
+    @return $string;
+}

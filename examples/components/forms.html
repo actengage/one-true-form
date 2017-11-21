@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form Examples</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#563d7c">
+
+    <link rel="stylesheet" href="../../dist/one-true-form.css">
+    <style media="screen">
+        form {
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 3px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            margin-top: 30px;
+        }
+
+        h1 + h3 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body class="one-true-form">
+
+    <div class="container">
+
+        <h1>Forms</h1>
+
+        <h3>Form Controls</h3>
+
+        <form>
+            <div class="form-group">
+                <label for="text">Input Field</label>
+                <input type="text" id="text" class="form-control" placeholder="you@example.com">
+                <small class="form-text text-muted">This is some helper text for a form field.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="select">Select Field</label>
+                <select id="select" class="form-control">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                    <option>Option 4</option>
+                    <option>Option 5</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="multi">Multiple Select Field</label>
+                <select multiple id="multi" class="form-control">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                    <option>Option 4</option>
+                    <option>Option 5</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="blob">Textarea</label>
+                <textarea id="blob" class="form-control"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="file">File Field</label>
+                <input type="file" id="file" class="form-control-file">
+            </div>
+        </form>
+
+        <h3>Checkbox & Radio Fields</h3>
+
+        <form>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input">
+                            Option 1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox">
+                            Option 2
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox">
+                            Option 3
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox">
+                            Option 4
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" disabled>
+                            Option 5 (Disabled)
+                        </label>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input name="radio" type="radio" class="form-check-input">
+                            Option 1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input  name="radio" type="radio" class="form-check-input">
+                            Option 2
+                        </label>
+                    </div>
+                    <div class="form-check disabled">
+                        <label class="form-check-label">
+                            <input  name="radio" type="radio" class="form-check-input">
+                            Option 3
+                        </label>
+                    </div>
+                    <div class="form-check disabled">
+                        <label class="form-check-label">
+                            <input  name="radio" type="radio" class="form-check-input">
+                            Option 4
+                        </label>
+                    </div>
+                    <div class="form-check disabled">
+                        <label class="form-check-label">
+                            <input  name="radio" type="radio" class="form-check-input" disabled>
+                            Option 5 (Disabled)
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <h3>Custom Controls</h3>
+
+        <form>
+            <h4>File Field</h4>
+
+            <div class="form-group">
+                <label class="custom-file">
+                    <input type="file" class="custom-file-input">
+                    <span class="custom-file-control"></span>
+                </label>
+            </div>
+
+            <hr>
+
+            <h4>Inline Elements</h4>
+
+            <div class="form-group">
+                <label for="custom-select">Custom Select Field</label>
+                <select id="custom-select" class="custom-select">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                    <option>Option 4</option>
+                    <option>Option 5</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" checked>
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Check this custom checkbox</span>
+                </label>
+                <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Check this custom checkbox</span>
+                </label>
+                <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" disabled>
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Check this custom checkbox</span>
+                </label>
+            </div>
+
+            <hr>
+
+            <h4>Stacked Elements</h4>
+
+            <div class="form-group">
+                <div class="custom-controls-stacked">
+                    <label for="custom-select">Custom Select Field</label>
+                    <select id="custom-select" class="custom-select">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                        <option>Option 4</option>
+                        <option>Option 5</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="custom-controls-stacked">
+                    <label class="custom-control custom-radio">
+                        <input type="radio" name="customRadio" class="custom-control-input">
+                        <span class="custom-control-indicator"></span>
+                        <span class="custom-control-description">Check this custom checkbox</span>
+                    </label>
+                    <label class="custom-control custom-radio">
+                        <input type="radio" name="customRadio" class="custom-control-input">
+                        <span class="custom-control-indicator"></span>
+                        <span class="custom-control-description">Check this custom checkbox</span>
+                    </label>
+                    <label class="custom-control custom-radio">
+                        <input type="radio" name="customRadio" class="custom-control-input" disabled>
+                        <span class="custom-control-indicator"></span>
+                        <span class="custom-control-description">Check this custom checkbox</span>
+                    </label>
+                </div>
+            </div>
+        </form>
+
+        <h3>Input Sizes</h3>
+
+        <form>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-xs" placeholder=".form-control-xs">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-sm" placeholder=".form-control-sm">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-md" placeholder=".form-control-md (Default)">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-lg" placeholder=".form-control-lg">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-xl" placeholder=".form-control-xl">
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <select class="form-control form-control-xs">
+                            <option>.form-control-xs</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <select class="form-control form-control-sm">
+                            <option>.form-control-sm</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <select class="form-control form-control-md">
+                            <option>.form-control-md</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <select class="form-control form-control-lg">
+                            <option>.form-control-lg</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <select class="form-control form-control-xl">
+                            <option>.form-control-xl</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <select class="form-control custom-select custom-select-xs">
+                            <option>.custom-select-xl</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <select class="form-control custom-select custom-select-sm">
+                            <option>.custom-select-xl</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <select class="form-control custom-select custom-select-md">
+                            <option>.custom-select-xl</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <select class="form-control custom-select custom-select-lg">
+                            <option>.custom-select-xl</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <select class="form-control custom-select custom-select-xl">
+                            <option>.custom-select-xl</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="custom-file custom-file-xs">
+                            <input type="file" class="custom-file-input">
+                            <span class="custom-file-control"></span>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="custom-file custom-file-sm">
+                            <input type="file" class="custom-file-input">
+                            <span class="custom-file-control"></span>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="custom-file custom-file-md">
+                            <input type="file" class="custom-file-input">
+                            <span class="custom-file-control"></span>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="custom-file custom-file-lg">
+                            <input type="file" class="custom-file-input">
+                            <span class="custom-file-control"></span>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="custom-file custom-file-xl">
+                            <input type="file" class="custom-file-input">
+                            <span class="custom-file-control"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <h3>Horizontal Forms</h3>
+
+        <form>
+            <div class="form-group row">
+                <label for="first" class="col-sm-2 col-form-label">First Name</label>
+                <div class="col-sm-10">
+                    <input type="text" id="first" class="form-control" placeholder="Jane">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="last" class="col-sm-2 col-form-label">Last Name</label>
+                <div class="col-sm-10">
+                    <input type="text" id="last" class="form-control" placeholder="Doe">
+                </div>
+            </div>
+            <fieldset class="form-group">
+                <div class="row">
+                    <legend class="col-form-legend col-sm-2">Radios</legend>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                Option one is this and that&mdash;be sure to include why it's great
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                Option two can be something else and selecting it will deselect option one
+                            </label>
+                        </div>
+                        <div class="form-check disabled">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
+                                Option three is disabled
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-group row">
+                <div class="col-sm-2">Checkbox</div>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox"> Check me out
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
+            </div>
+        </form>
+
+        <h3>Horizontal Form Label Size</h3>
+
+        <form novalidate>
+            <div class="form-group row">
+                <label for="label-xs" class="col-sm-2 col-form-label col-form-label-sm">Extra Small</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control form-control-sm" id="label-xs" placeholder="col-form-label-sm">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="label-sm" class="col-sm-2 col-form-label col-form-label-sm">Small</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control form-control-sm" id="label-sm" placeholder="col-form-label-sm">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="label-md" class="col-sm-2 col-form-label">Medium</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="label-md" placeholder="col-form-label">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="label-lg" class="col-sm-2 col-form-label col-form-label-lg">Large</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control form-control-lg" id="label-lg" placeholder="col-form-label-lg">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="label-xl" class="col-sm-2 col-form-label col-form-label-lg">Extra Large</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control form-control-lg" id="label-xl" placeholder="col-form-label-lg">
+                </div>
+            </div>
+        </form>
+
+        <h3>Validation</h3>
+
+        <form class="was-validated">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h4>Valid Fields</h4>
+
+                    <div class="form-group">
+                        <label>Text Field</label>
+                        <input type="text" class="form-control" value="Some Value" placeholder=":valid" required>
+                        <div class="valid-feedback">This field is valid!</div>
+                        <div class="invalid-feedback">This field is invalid!</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Select Field</label>
+                        <select class="form-control" required>
+                            <option value=""></option>
+                            <option value="1">Option 1</option>
+                            <option value="2" selected>Option 2</option>
+                            <option value="3">Option 3</option>
+                            <option value="4">Option 4</option>
+                            <option value="5">Option 5</option>
+                        </select>
+                        <div class="valid-feedback">This field is valid!</div>
+                        <div class="invalid-feedback">This field is invalid!</div>
+                    </div>
+
+                    <div class="form-group is-valid">
+                        <h6>Checkboxes</h6>
+
+                        <div class="form-check is-valid">
+                            <label class="form-check-label">
+                                <input type="checkbox" name="validCheckbox[]" class="form-check-input" value="1" required> Option 1
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="checkbox" name="validCheckbox[]" class="form-check-input" value="2" required> Option 2
+                            </label>
+                        </div>
+
+                        <div class="valid-feedback">This field is valid!</div>
+                        <div class="invalid-feedback">This field is invalid!</div>
+                    </div>
+
+                    <div class="form-group">
+                        <h6>Radio Fields</h6>
+
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" name="validRadio" class="form-check-input" required>
+                                Radio 1
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input  type="radio" name="validRadio" class="form-check-input" required>
+                                Radio 2
+                            </label>
+                        </div>
+                        <div class="valid-feedback">This field is valid!</div>
+                        <div class="invalid-feedback">This field is invalid!</div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <h4>Invalid Fields</h4>
+
+                    <div class="form-group">
+                        <label>Text Field</label>
+                        <input type="text" class="form-control" placeholder=":valid" invalid required>
+                        <div class="valid-feedback">This field is valid!</div>
+                        <div class="invalid-feedback">This field is invalid!</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Select Field</label>
+                        <select class="form-control" invalid required>
+                            <option value="" selected></option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                            <option value="4">Option 4</option>
+                            <option value="5">Option 5</option>
+                        </select>
+                        <div class="valid-feedback">This field is valid!</div>
+                        <div class="invalid-feedback">This field is invalid!</div>
+                    </div>
+
+                    <div class="form-group">
+                        <h6>Checkboxes</h6>
+
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="checkbox" name="invalidCheckbox[]" class="form-check-input" invalid> Option 1
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="checkbox" name="invalidCheckbox[]" class="form-check-input is-invalid">
+                                Option 2
+                            </label>
+                        </div>
+
+                        <div class="valid-feedback">This field is valid!</div>
+                        <div class="invalid-feedback">This field is invalid!</div>
+                    </div>
+
+                    <div class="form-group">
+                        <h6>Radio Fields</h6>
+
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" name="invalidRadio" class="form-check-input" required>
+                                Radio 1
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input  type="radio" name="invalidRadio" class="form-check-input" required>
+                                Radio 2
+                            </label>
+                            <div class="valid-feedback">This field is valid!</div>
+                            <div class="invalid-feedback">This field is invalid!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>

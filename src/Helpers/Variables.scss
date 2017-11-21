@@ -1,0 +1,216 @@
+// ./Helpers/Variables.scss
+
+// Reboot Variables
+
+$body-bg: transparent;
+$body-color: black;
+$font-size-base: 16px;
+$font-weight-base: 400;
+$line-height-base: 1.5;
+$font-family-base: sans-serif;
+$dt-font-weight: 600;
+$table-cell-padding: .75rem;
+$paragraph-margin-bottom: 1rem;
+
+
+// Color Variables
+
+$toggle-color: #72af37;
+$error-color: #e02233;
+
+$link-color: #0275d8;
+$link-decoration: none;
+$link-hover-color: #0275d8;
+$link-hover-decoration: underline;
+
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$text-muted: $gray-600 !default;
+
+$black: #292b2c;
+$white: white;
+$red: #b41327;
+$orange: #bd5c2e;
+$yellow: #eeaf03;
+$green: #72af37;
+$blue: #428bca;
+$indigo: #5bc0de;
+$violet: #5f0f40;
+
+
+// Header Variables
+
+$headings-color: $black;
+$headings-margin-bottom: 1rem;
+$headings-font-family: sans-serif;
+$headings-font-weight: 400;
+$headings-line-height: inherit;
+
+$h1-font-size: $font-size-base * 3;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base * 1.15;
+
+// Breakpoint Variables
+
+$vertical-form-width: 33%;
+$breakpoint-big-phone: 414px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 960px;
+
+
+// Grid Variables
+
+$grid-width: 100%;
+$grid-gutter: 15px;
+$grid-sm-breakpoint: 540px;
+$grid-md-breakpoint: 720px;
+$grid-lg-breakpoint: 960px;
+$grid-xl-breakpoint: 1140px;
+
+// Form Variables
+
+$border-radius: .25rem;
+
+$input-height: calc(2.25rem + 2px);
+$input-font-size: 16px;
+$input-padding-x: 1rem;
+$input-padding-y: .7rem;
+$input-border-width: 1px;
+$input-border-style: solid;
+$input-border-color: $gray-400 !default;
+$input-color: $black;
+$input-bg: $white;
+$input-highlight-color: rgb(150, 185, 246);
+
+$input-box-shadow: inset 0 1px 2px rgba($black, .075);
+$input-border-radius: $border-radius;
+$input-line-height: $line-height-base;
+$input-focus-border-color: $input-highlight-color;
+$input-focus-box-shadow: 0 0 0 0.2rem rgba($input-highlight-color, .5);
+
+$form-group-margin-bottom: 1rem;
+$form-control-line-height: $line-height-base;
+$form-control-font-size: 1rem;
+$form-control-background-color: white;
+$form-control-padding-y: .375rem;
+$form-control-padding-x: .75rem;
+$form-feedback-valid-color: $green;
+$form-feedback-invalid-color: $red;
+$form-control-border-radius: .25rem;
+$form-control-border: 1px solid #ced4da;
+$form-control-box-shadow: $input-box-shadow;
+$form-control-highlight-color: $input-highlight-color;
+
+$custom-select-padding-y:           .375rem !default;
+$custom-select-padding-x:          .75rem !default;
+$custom-select-height:              $input-height !default;
+$custom-select-indicator-padding:   1rem !default; // Extra padding to account for the presence of the background-image based indicator
+$custom-select-line-height:         $input-line-height !default;
+$custom-select-color:               $input-color !default;
+$custom-select-disabled-color:      $gray-600 !default;
+$custom-select-bg:                  $white !default;
+$custom-select-disabled-bg:         $gray-200 !default;
+$custom-select-bg-size:             8px 10px !default; // In pixels because image dimensions
+$custom-select-indicator-color:     $gray-800 !default;
+$custom-select-indicator:           str-replace("#", "%23", url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E")) !default;
+$custom-select-border-width:        $input-border-width !default;
+$custom-select-border-color:        $input-border-color !default;
+$custom-select-border-radius:       $border-radius !default;
+$custom-select-box-shadow:          $input-box-shadow;
+
+$custom-select-focus-border-color:  $input-focus-border-color !default;
+$custom-select-focus-box-shadow:    $input-focus-box-shadow !default;
+
+$custom-file-height:                38px !default;
+$custom-file-width:                 14rem !default;
+$custom-file-focus-box-shadow:      0 0 0 .075rem $white, 0 0 0 .2rem theme-color("primary") !default;
+
+$custom-file-padding-y:             $form-control-padding-y !default;
+$custom-file-padding-x:             $form-control-padding-x !default;
+$custom-file-line-height:           $input-line-height !default;
+$custom-file-color:                 $input-color !default;
+$custom-file-bg:                    $input-bg !default;
+$custom-file-border-width:          $input-border-width !default;
+$custom-file-border-color:          $input-border-color !default;
+$custom-file-border-radius:         $input-border-radius !default;
+$custom-file-box-shadow:            $input-box-shadow !default;
+$custom-file-button-color:          $custom-file-color !default;
+$custom-file-button-bg:             $input-bg !default;
+
+$custom-control-gutter:                 1.5rem !default;
+$custom-control-spacer-y:               .25rem !default;
+$custom-control-spacer-x:               1rem !default;
+
+$custom-control-indicator-bg:       #ddd !default;
+$custom-control-indicator-size:     1rem !default;
+$custom-control-indicator-checked-color: $white !default;
+$custom-control-indicator-checked-bg: #007bff !default;
+$custom-control-indicator-active-color: $white !default;
+$custom-control-indicator-active-bg: #b3d7ff !default;
+$custom-control-indicator-active-box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0,123,255,.25) !default;
+$custom-control-indicator-disabled-bg: $gray-200 !default;
+$custom-control-description-disabled-color: $gray-200 !default;
+$custom-control-indicator-bg-size: 50% 50% !default;
+$custom-control-indicator-focus-box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0,123,255,.25);
+
+$custom-checkbox-indicator-border-radius: $input-border-radius !default;
+$custom-checkbox-indicator-icon-checked: str-replace("#", "%23", url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#{$custom-control-indicator-checked-color}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E")) !default;
+$custom-checkbox-indicator-indeterminate-bg:    theme-color("primary") !default;
+$custom-checkbox-indicator-indeterminate-color: $custom-control-indicator-checked-color !default;
+$custom-checkbox-indicator-icon-indeterminate:  str-replace("#", "%23", url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='#{$custom-checkbox-indicator-indeterminate-color}' d='M0 2h4'/%3E%3C/svg%3E")) !default;
+$custom-checkbox-indicator-indeterminate-box-shadow: none !default;
+
+$custom-radio-indicator-border-radius:          50% !default;
+$custom-radio-indicator-icon-checked:           str-replace("#", "%23", url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='#{$custom-control-indicator-checked-color}'/%3E%3C/svg%3E")) !default;
+
+
+// Button variables
+
+$btn-padding-y: $input-padding-y;
+$btn-padding-x: $input-padding-x;
+$btn-font-size: $input-font-size;
+$btn-border-radius: $border-radius;
+$btn-border-style: $input-border-style;
+$btn-border-width: $input-border-width;
+$btn-border: $btn-border-width solid $gray-500;
+
+$btn-primary-color: $white;
+$btn-primary-bgcolor: $blue;
+$btn-primary-border-color: darken($blue, 5%);
+
+$btn-secondary-color: $black;
+$btn-secondary-bgcolor: $white;
+$btn-secondary-border-color: lighten($gray-500, 20%);
+
+$btn-success-color: $white;
+$btn-success-bgcolor: $green;
+$btn-success-border-color: darken($btn-success-bgcolor, 5%);
+
+$btn-info-color: $white;
+$btn-info-bgcolor: $indigo;
+$btn-info-border-color: darken($btn-info-bgcolor, 5%);
+
+$btn-warning-color: $white;
+$btn-warning-bgcolor: $yellow;
+$btn-warning-border-color: darken($btn-warning-bgcolor, 5%);
+
+$btn-danger-color: $white;
+$btn-danger-bgcolor: $red;
+$btn-danger-border-color: darken($btn-danger-bgcolor, 5%);
+
+$btn-link-color: $link-color;
+$btn-link-bgcolor: transparent;
+$btn-link-border-color: transparent;

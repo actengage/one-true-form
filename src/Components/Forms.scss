@@ -1,0 +1,420 @@
+
+@mixin form-control-size($size, $modifier:1) {
+    &.form-control-#{$size} {
+        font-size: $form-control-font-size * $modifier;
+        border-radius: $form-control-border-radius * $modifier;
+        padding: $form-control-padding-y * $modifier $form-control-padding-x * $modifier;
+    }
+
+    &.form-control-#{$size}:not([size]):not([multiple]) {
+        height: 2.375rem * $modifier;
+    }
+}
+
+@mixin custom-select-size($size, $modifier:1) {
+    &.custom-select-#{$size} {
+        font-size: $form-control-font-size * $modifier;
+        border-radius: $form-control-border-radius * $modifier;
+        padding: $form-control-padding-y * $modifier $form-control-padding-x * $modifier;
+
+        &:not([size]):not([multiple]) {
+            height: 2.375rem * $modifier;
+        }
+    }
+}
+
+@mixin custom-file-size($size, $modifier:1) {
+    &.custom-file-#{$size} {
+        .custom-file-input,
+        .custom-file-control {
+            height: $custom-file-height * $modifier;
+        }
+
+        .custom-file-control::before,
+        .custom-file-control::after {
+            font-size: $form-control-font-size * $modifier;
+        }
+
+        .custom-file-control::before {
+            height: $custom-file-height * $modifier;
+            padding: $custom-file-padding-y * $modifier $custom-file-padding-x * $modifier;
+            border-radius: 0 $custom-file-border-radius * $modifier $custom-file-border-radius * $modifier 0;
+        }
+    }
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5em;
+}
+
+.form-group {
+    margin-bottom: $form-group-margin-bottom;
+}
+
+.form-control {
+    margin: 0;
+    width: 100%;
+    display: block;
+    background-image: none;
+    background-clip: padding-box;
+    line-height: $form-control-line-height;
+    background-color: $form-control-background-color;
+    border: $form-control-border;
+    padding: $form-control-padding-y $form-control-padding-x;
+    font-size: $form-control-font-size;
+    box-shadow: $form-control-box-shadow;
+    border-radius: $form-control-border-radius;
+
+    &:focus {
+        outline: none;
+        border-color: $input-focus-border-color;
+        box-shadow: $input-focus-box-shadow;
+    }
+
+    @include form-control-size('xs', .7);
+    @include form-control-size('sm', .8);
+    @include form-control-size('md');
+    @include form-control-size('lg', 1.25);
+    @include form-control-size('xl', 1.5);
+}
+
+select.form-control:not([size]):not([multiple]) {
+    height: 2.375rem;
+}
+
+.form-control-file {
+    border: 0;
+    display: block;
+}
+
+.form-text {
+    display: block;
+    margin-top: .25rem;
+}
+
+.form-check {
+    display: block;
+    position: relative;
+    margin-bottom: .5rem;
+}
+
+.form-check-label {
+    padding-left: 1.25rem;
+    margin-bottom: 0;
+}
+
+.form-check-input {
+    position: absolute;
+    margin-top: .25rem;
+    margin-left: -1.25rem;
+}
+
+@include form-validation-state("valid", $form-feedback-valid-color);
+@include form-validation-state("invalid", $form-feedback-invalid-color);
+
+
+/*
+.custom-select.is-valid,
+.form-control.is-valid,
+.was-validated .custom-select:valid,
+.was-validated .form-control:valid {
+    border-color: $green;
+}
+
+.valid-feedback {
+    display: none;
+    margin-top: 1rem * .45;
+    font-size: 1rem * .85;
+    color: $green;
+}
+
+.form-group.is-valid~.valid-feedback,
+.custom-select.is-valid~.valid-feedback,
+.custom-select.is-valid~.valid-tooltip,
+.form-control.is-valid~.valid-feedback,
+.form-control.is-valid~.valid-tooltip,
+.was-validated .custom-select:valid~.valid-feedback,
+.was-validated .custom-select:valid~.valid-tooltip,
+.was-validated .form-control:valid~.valid-feedback,
+.was-validated .form-control:valid~.valid-tooltip {
+    display: block;
+}
+
+.custom-select.is-invalid,
+.form-control.is-invalid,
+.was-validated .custom-select:invalid,
+.was-validated .form-control:invalid {
+    border-color: $red;
+}
+
+.custom-control-input.is-invalid~.custom-control-description,
+.was-validated .custom-control-input:invalid~.custom-control-description {
+    color: $red;
+}
+
+.invalid-feedback {
+    display: none;
+    margin-top: 1rem * .45;
+    font-size: 1rem * .85;
+    color: $red;
+}
+
+.custom-select.is-invalid~.invalid-feedback,
+.custom-select.is-invalid~.invalid-tooltip,
+.form-control.is-invalid~.invalid-feedback,
+.form-control.is-invalid~.invalid-tooltip,
+.was-validated .custom-select:invalid~.invalid-feedback,
+.was-validated .custom-select:invalid~.invalid-tooltip,
+.was-validated .form-control:invalid~.invalid-feedback,
+.was-validated .form-control:invalid~.invalid-tooltip {
+    display: block;
+}
+*/
+
+.custom-control {
+  position: relative;
+  display: inline-flex;
+  min-height: (1rem * $line-height-base);
+  padding-left: $custom-control-gutter;
+  margin-right: $custom-control-spacer-x;
+}
+
+.custom-control-input {
+  position: absolute;
+  z-index: -1; // Put the input behind the label so it doesn't overlay text
+  opacity: 0;
+
+  &:checked ~ .custom-control-indicator {
+    color: $custom-control-indicator-checked-color;
+    background-color: $custom-control-indicator-checked-bg;
+    background-image: linear-gradient(180deg, mix($body-bg, $custom-control-indicator-checked-bg, 15%), $custom-control-indicator-checked-bg) repeat-x;
+  }
+
+  &:focus ~ .custom-control-indicator {
+    // the mixin is not used here to make sure there is feedback
+    box-shadow: $custom-control-indicator-focus-box-shadow;
+  }
+
+  &:active ~ .custom-control-indicator {
+    color: $custom-control-indicator-active-color;
+    background-color: $custom-control-indicator-checked-bg;
+    background-image: linear-gradient(180deg, mix($body-bg, $custom-control-indicator-checked-bg, 15%), $custom-control-indicator-checked-bg) repeat-x;
+  }
+
+  &:disabled {
+    ~ .custom-control-indicator {
+      background-color: $custom-control-indicator-disabled-bg;
+    }
+
+    ~ .custom-control-description {
+      color: $custom-control-description-disabled-color;
+    }
+  }
+}
+
+// Custom indicator
+//
+// Generates a shadow element to create our makeshift checkbox/radio background.
+
+.custom-control-indicator {
+  position: absolute;
+  top: (($line-height-base - $custom-control-indicator-size) / 2);
+  left: 0;
+  display: block;
+  width: $custom-control-indicator-size;
+  height: $custom-control-indicator-size;
+  pointer-events: none;
+  user-select: none;
+  background-color: $custom-control-indicator-bg;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: $custom-control-indicator-bg-size;
+}
+
+// Checkboxes
+//
+// Tweak just a few things for checkboxes.
+
+.custom-checkbox {
+  .custom-control-indicator {
+    border-radius: $custom-checkbox-indicator-border-radius;
+  }
+
+  .custom-control-input:checked ~ .custom-control-indicator {
+    background-image: $custom-checkbox-indicator-icon-checked;
+  }
+
+  .custom-control-input:indeterminate ~ .custom-control-indicator {
+    background-color: $custom-checkbox-indicator-indeterminate-bg;
+    background-image: $custom-checkbox-indicator-icon-indeterminate;
+  }
+}
+
+// Radios
+//
+// Tweak just a few things for radios.
+
+.custom-radio {
+  .custom-control-indicator {
+    border-radius: $custom-radio-indicator-border-radius;
+  }
+
+  .custom-control-input:checked ~ .custom-control-indicator {
+    background-image: $custom-radio-indicator-icon-checked;
+  }
+}
+
+
+// Layout options
+//
+// By default radios and checkboxes are `inline-block` with no additional spacing
+// set. Use these optional classes to tweak the layout.
+
+.custom-controls-stacked {
+  display: flex;
+  flex-direction: column;
+
+  .custom-control {
+    margin-bottom: $custom-control-spacer-y;
+
+    + .custom-control {
+      margin-left: 0;
+    }
+  }
+}
+
+// Select
+//
+// Replaces the browser default select with a custom one, mostly pulled from
+// http://primercss.io.
+//
+
+.custom-select {
+    display: inline-block;
+    max-width: 100%;
+    height: $input-height;
+    padding: $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x;
+    line-height: $custom-select-line-height;
+    color: $custom-select-color;
+    vertical-align: middle;
+    background: $custom-select-bg $custom-select-indicator no-repeat right $custom-select-padding-x center;
+    background-size: $custom-select-bg-size;
+    border: $custom-select-border-width solid $custom-select-border-color;
+    border-radius: $custom-select-border-radius;
+    box-shadow: $custom-select-box-shadow;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    &:focus {
+        outline: none;
+        border-color: $input-focus-border-color;
+        box-shadow: $input-focus-box-shadow;
+
+
+        &::-ms-value {
+            // For visual consistency with other platforms/browsers,
+            // supress the default white text on blue background highlight given to
+            // the selected option text when the (still closed) <select> receives focus
+            // in IE and (under certain conditions) Edge.
+            // See https://github.com/twbs/bootstrap/issues/19398.
+            color: $input-color;
+            background-color: $input-bg;
+        }
+    }
+
+    &[multiple] {
+        height: auto;
+        background-image: none;
+    }
+
+    &:disabled {
+        color: $custom-select-disabled-color;
+        background-color: $custom-select-disabled-bg;
+    }
+
+    // Hides the default caret in IE11
+    &::-ms-expand {
+        opacity: 0;
+    }
+
+    @include custom-select-size('xs', .7);
+    @include custom-select-size('sm', .8);
+    @include custom-select-size('md');
+    @include custom-select-size('lg', 1.25);
+    @include custom-select-size('xl', 1.5);
+}
+
+
+// File
+//
+// Custom file input.
+
+.custom-file {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 0;
+
+    @include custom-file-size('xs', .7);
+    @include custom-file-size('sm', .8);
+    @include custom-file-size('md');
+    @include custom-file-size('lg', 1.25);
+    @include custom-file-size('xl', 1.5);
+}
+
+.custom-file-input {
+    height: $custom-file-height;
+    min-width: $custom-file-width;
+    max-width: 100%;
+    margin: 0;
+    opacity: 0;
+
+    &:focus ~ .custom-file-control {
+        box-shadow: $custom-file-focus-box-shadow;
+    }
+}
+
+.custom-file-control {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    height: $custom-file-height;
+    padding: $custom-file-padding-y $custom-file-padding-x;
+    line-height: $custom-file-line-height;
+    color: $custom-file-color;
+    pointer-events: none;
+    user-select: none;
+    background-color: $custom-file-bg;
+    border: $custom-file-border-width solid $custom-file-border-color;
+    border-radius: $custom-file-border-radius;
+    vertical-align: middle;
+
+    &::before {
+        content: "Browse";
+        position: absolute;
+        top: -$custom-file-border-width;
+        right: -$custom-file-border-width;
+        bottom: -$custom-file-border-width;
+        z-index: 6;
+        display: block;
+        height: $custom-file-height;
+        padding: $custom-file-padding-y $custom-file-padding-x;
+        line-height: $custom-file-line-height;
+        color: $custom-file-button-color;
+        background-color: $gray-200;
+        border: $custom-file-border-width solid $custom-file-border-color;
+        border-radius: 0 $custom-file-border-radius $custom-file-border-radius 0;
+    }
+
+    &::after {
+        content: 'Choose file...';
+        position: absolute;
+        display: block;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

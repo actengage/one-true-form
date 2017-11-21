@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Grid</title>
+        <title>Grid Examples</title>
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,37 +21,19 @@
                 color: white;
             }
 
-            p > b {
-                background-color: cornsilk;
-                padding: 5px
+            .tag {
+                color: white;
+                background: #72AF37;
+                padding: 5px;
             }
         </style>
     </head>
-    <body>
+    <body class="one-true-form">
 
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <h1>Grid</h1>
-
-                    <p>
-                        Visible Viewport Size:
-
-                        <b class="show-xs">Extra Small</b>
-                        <b class="show-sm">Small</b>
-                        <b class="show-md">Medium</b>
-                        <b class="show-lg">Large</b>
-                        <b class="show-xl">Extra Large</b>
-                    </p>
-                    <p class="commas">
-                        Hidden Viewport Sizes:
-
-                        <b class="hide-xs">Extra Small</b>
-                        <b class="hide-sm">Small</b>
-                        <b class="hide-md">Medium</b>
-                        <b class="hide-lg">Large</b>
-                        <b class="hide-xl">Extra Large</b>
-                    </p>
                 </div>
             </div>
             <div class="row">
@@ -235,6 +217,83 @@
                 <div class="col-md-8 col-md-pull-2 col-md-push-2"><span>col-md-9<br>col-md-push-2</span></div>
                 <div class="col-lg-6 col-lg-pull-3 col-lg-push-3"><span>col-lg-9<br>col-lg-push-3</span></div>
                 <div class="col-xl-4 col-xl-pull-4 col-xl-push-4"><span>col-xl-8<br>col-xl-push-4</span></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3>Display Classes</h3>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Screen Size</th>
+                                <th>Class</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Hidden on all</td>
+                                <td><code class="highlighter-rouge">d-none</code></td>
+                            </tr>
+                            <tr>
+                                <td>Hidden only on xs</td>
+                                <td><code class="highlighter-rouge">d-none d-sm-block</code></td>
+                            </tr>
+                            <tr>
+                                <td>Hidden only on sm</td>
+                                <td><code class="highlighter-rouge">d-sm-none d-md-block</code></td>
+                            </tr>
+                            <tr>
+                                <td>Hidden only on md</td>
+                                <td><code class="highlighter-rouge">d-md-none d-lg-block</code></td>
+                            </tr>
+                            <tr>
+                                <td>Hidden only on lg</td>
+                                <td><code class="highlighter-rouge">d-lg-none d-xl-block</code></td>
+                            </tr>
+                            <tr>
+                                <td>Hidden only on xl</td>
+                                <td><code class="highlighter-rouge">d-xl-none</code></td>
+                            </tr>
+                            <tr>
+                                <td>Visible on all</td>
+                                <td><code class="highlighter-rouge">d-block</code></td>
+                            </tr>
+                            <tr>
+                                <td>Visible only on xs</td>
+                                <td><code class="highlighter-rouge">d-block d-sm-none</code></td>
+                            </tr>
+                            <tr>
+                                <td>Visible only on sm</td>
+                                <td><code class="highlighter-rouge">d-none d-sm-block d-md-none</code></td>
+                            </tr>
+                            <tr>
+                                <td>Visible only on md</td>
+                                <td><code class="highlighter-rouge">d-none d-md-block d-lg-none</code></td>
+                            </tr>
+                            <tr>
+                                <td>Visible only on lg</td>
+                                <td><code class="highlighter-rouge">d-none d-lg-block d-xl-none</code></td>
+                            </tr>
+                            <tr>
+                                <td>Visible only on xl</td>
+                                <td><code class="highlighter-rouge">d-none d-xl-block</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>
+                        Current Screen Size:
+                        <b class="tag d-xs-inline-block d-sm-none">Extra Small</b>
+                        <b class="tag d-none d-sm-inline-block d-md-none">Small</b>
+                        <b class="tag d-none d-md-inline-block d-lg-none">Medium</b>
+                        <b class="tag d-none d-lg-inline-block d-xl-none">Large</b>
+                        <b class="tag d-none d-xl-inline-block">Extra Large</b>
+                    </p>
+
+                </div>
             </div>
         </div>
 
