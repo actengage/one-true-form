@@ -194,8 +194,8 @@ $btn-primary-bgcolor: $blue;
 $btn-primary-border-color: darken($blue, 5%);
 
 $btn-secondary-color: $gray-800;
-$btn-secondary-bgcolor: $gray-200;
-$btn-secondary-border-color: lighten($gray-800, 20%);
+$btn-secondary-bgcolor: $gray-100;
+$btn-secondary-border-color: lighten(btn-secondary-color, 20%);
 
 $btn-success-color: $white;
 $btn-success-bgcolor: $green;
