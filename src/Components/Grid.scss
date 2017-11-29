@@ -80,6 +80,7 @@
 .d-xs-inline, .d-inline { display: inline !important; }
 
 @include display-spacing-rules();
+@include display-spacing-rules('xs');
 
 @media only screen and (min-width: $grid-sm-breakpoint) {
     @include columns('.col-$i, .col-sm-$i');

@@ -2,6 +2,7 @@
 
 // Reboot Variables
 
+$spacer: 1rem;
 $body-bg: transparent;
 $body-color: black;
 $font-size-base: 16px;
@@ -52,7 +53,7 @@ $violet: #5f0f40;
 // Header Variables
 
 $headings-color: $black;
-$headings-margin-bottom: 1rem;
+$headings-margin-bottom: .5rem;
 $headings-font-family: sans-serif;
 $headings-font-weight: 400;
 $headings-line-height: inherit;
@@ -195,7 +196,7 @@ $btn-primary-border-color: darken($blue, 5%);
 
 $btn-secondary-color: $gray-800;
 $btn-secondary-bgcolor: $gray-100;
-$btn-secondary-border-color: lighten(btn-secondary-color, 20%);
+$btn-secondary-border-color: lighten($btn-secondary-color, 20%);
 
 $btn-success-color: $white;
 $btn-success-bgcolor: $green;
