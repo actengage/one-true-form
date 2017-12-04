@@ -60,7 +60,7 @@
     );
 
     @each $property in (margin, padding) {
-        @each $side in (top, bottom, left, right, x, y) {
+        @each $side in (false, top, bottom, left, right, x, y) {
             @each $size in $sizes {
                 @include display-spacing-rule(nth($size, 1), $property, nth($size, 2), $side, $breakpoint);
             }

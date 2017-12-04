@@ -34,10 +34,34 @@ small, .small {
     font-size: 80%;
 }
 
+.text-primary {
+    color: $blue;
+}
+.text-secondary {
+    color: $gray-800;
+}
+.text-light {
+    color: $white;
+}
+.text-dark {
+    color: $black;
+}
+.text-danger {
+    color: $red;
+}
+.text-warning {
+    color: $orange;
+}
+.text-success {
+    color: $green;
+}
+.text-info {
+    color: $indigo;
+}
+
 .text-muted {
     color: $text-muted !important;
 }
-
 .text-bold {
     font-weight: bold;
 }
@@ -45,13 +69,14 @@ small, .small {
 .text-center {
     text-align: center;
 }
-
 .text-left {
     text-align: left;
 }
-
 .text-right {
     text-align: right;
+}
+.text-justify {
+    text-align: justify;
 }
 
 .text-xs {
