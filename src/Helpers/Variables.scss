@@ -217,3 +217,13 @@ $btn-danger-border-color: darken($btn-danger-bgcolor, 5%);
 $btn-link-color: $link-color;
 $btn-link-bgcolor: transparent;
 $btn-link-border-color: transparent;
+
+// Activity Indicator variables
+
+$activity-indicator-dot-size: .6rem;
+$activity-indicator-spinner-size: 40px;
+$activity-indicator-spinner-width: 10%;
+$activity-indicator-spinner-height: 30%;
+$activity-indicator-spinner-delay: 1.2s;
+$activity-indicator-animated-delay-in: 500ms;
+$activity-indicator-animated-delay-out: 500ms;

@@ -1,0 +1,667 @@
+// Activity Indicator
+
+.activity-indicator {
+    position: relative;
+    display: inline-flex;
+    font-size: 0;
+    line-height: 0;
+}
+
+
+// Activity Indicator Button
+
+.btn-activity-top,
+.btn-activity-bottom,
+.btn-activity-left,
+.btn-activity-right {
+    position: relative;
+    transition: padding ($activity-indicator-animated-delay-in / 2) ease-in;
+
+    & .activity-indicator {
+        opacity: 0;
+        position: absolute;
+        visibility: hidden;
+        transition: opacity $activity-indicator-animated-delay-out ease-in;
+    }
+}
+
+.btn-activity-top .activity-indicator,
+.btn-activity-bottom .activity-indicator {
+    left: 50%;
+    margin-right: -50%;
+    transform: translateX(-50%);
+}
+
+.btn-activity-left .activity-indicator,
+.btn-activity-right .activity-indicator {
+    top: 50%;
+    margin-bottom: -50%;
+    transform: translateY(-50%);
+}
+
+.btn-activity .activity-indicator {
+}
+
+.btn-activity:not(.btn-link) {
+    animation: btn-activity-in $activity-indicator-animated-delay-in;
+}
+
+.btn-hide-activity:not(.btn-link) {
+    animation: btn-activity-out $activity-indicator-animated-delay-out;
+}
+
+.btn-activity {
+    @keyframes btn-activity-in {
+        0%, 100% {
+            transform: scale(1);
+        } 30% {
+            transform: scale(.9);
+        }
+    }
+
+    @keyframes btn-activity-out {
+        0%, 100% {
+            transform: scale(1);
+        } 70% {
+            transform: scale(.9);
+        }
+    }
+
+    &.btn-hide-activity .activity-indicator {
+        opacity: 0;
+    }
+
+    & .activity-indicator {
+        opacity: 1;
+        visibility: visible;
+        position: absolute;
+    }
+
+    &.btn-xs {
+        &.btn-activity-top.btn-activity-indicator-dots {
+            padding-top: $btn-font-size * 1.25;
+
+            & .activity-indicator {
+                top: $btn-font-size * .5;
+            }
+        }
+
+        &.btn-activity-bottom.btn-activity-indicator-dots {
+            padding-bottom: $btn-font-size * 1.25;
+
+            & .activity-indicator {
+                bottom: $btn-font-size * .5;
+            }
+        }
+
+        &.btn-activity-left.btn-activity-indicator-dots {
+            padding-left: $btn-font-size * 2.33;
+
+            & .activity-indicator {
+                left: $btn-font-size * .5;
+            }
+        }
+
+        &.btn-activity-right.btn-activity-indicator-dots {
+            padding-right: $btn-font-size * 2.33;
+
+            & .activity-indicator {
+                right: $btn-font-size * .5;
+            }
+        }
+
+        &.btn-activity-indicator-dots .activity-indicator > div,
+        & .activity-indicator-dots > div {
+            width: $btn-font-size / 3;
+            height: $btn-font-size / 3;
+        }
+
+        &.btn-activity-top.btn-activity-indicator-spinner {
+            padding-top: $btn-font-size * 1.66;
+
+            & .activity-indicator {
+                top: $btn-font-size * .25;
+            }
+        }
+
+        &.btn-activity-bottom.btn-activity-indicator-spinner {
+            padding-bottom: $btn-font-size * 1.66;
+
+            & .activity-indicator {
+                bottom: $btn-font-size * .25;
+            }
+        }
+
+        &.btn-activity-left.btn-activity-indicator-spinner {
+            padding-left: $btn-font-size * 1.66;
+
+            & .activity-indicator {
+                left: $btn-font-size * .25;
+            }
+        }
+
+        &.btn-activity-right.btn-activity-indicator-spinner {
+            padding-right: $btn-font-size * 1.66;
+
+            & .activity-indicator {
+                right: $btn-font-size * .25;
+            }
+        }
+
+        &.btn-activity-indicator-spinner .activity-indicator,
+        & .activity-indicator-spinner {
+            width: $btn-font-size * 1;
+            height: $btn-font-size * 1;
+
+            & > div:before {
+                //width: $activity-indicator-spinner-width * .63;
+                //height: $activity-indicator-spinner-height * .66;
+                width: $activity-indicator-spinner-width * .84;
+                height: $activity-indicator-spinner-height * 1;
+            }
+        }
+    }
+
+    &.btn-sm {
+        &.btn-activity-top.btn-activity-indicator-dots {
+            padding-top: $btn-font-size * 1.75;
+
+            & .activity-indicator {
+                top: $btn-font-size * .5;
+            }
+        }
+
+        &.btn-activity-bottom.btn-activity-indicator-dots {
+            padding-bottom: $btn-font-size * 1.75;
+
+            & .activity-indicator {
+                bottom: $btn-font-size * .5;
+            }
+        }
+
+        &.btn-activity-left.btn-activity-indicator-dots {
+            padding-left: $btn-font-size * 3;
+
+            & .activity-indicator {
+                left: $btn-font-size * .5;
+            }
+        }
+
+        &.btn-activity-right.btn-activity-indicator-dots {
+            padding-right: $btn-font-size * 3;
+
+            & .activity-indicator {
+                right: $btn-font-size * .5;
+            }
+        }
+
+        &.btn-activity-indicator-dots .activity-indicator > div,
+        & .activity-indicator-dots > div {
+            width: $btn-font-size / 2;
+            height: $btn-font-size / 2;
+        }
+
+        &.btn-activity-top.btn-activity-indicator-spinner {
+            padding-top: $btn-font-size * 2;
+
+            & .activity-indicator {
+                top: $btn-font-size * .33;
+            }
+        }
+
+        &.btn-activity-bottom.btn-activity-indicator-spinner {
+            padding-bottom: $btn-font-size * 2;
+
+            & .activity-indicator {
+                bottom: $btn-font-size * .33;
+            }
+        }
+
+        &.btn-activity-left.btn-activity-indicator-spinner {
+            padding-left: $btn-font-size * 2.5;
+
+            & .activity-indicator {
+                left: $btn-font-size * .5;
+            }
+        }
+
+        &.btn-activity-right.btn-activity-indicator-spinner {
+            padding-right: $btn-font-size * 2.5;
+
+            & .activity-indicator {
+                right: $btn-font-size * .5;
+            }
+        }
+
+        &.btn-activity-indicator-spinner .activity-indicator,
+        & .activity-indicator-spinner {
+            width: $btn-font-size * 1.5;
+            height: $btn-font-size * 1.5;
+
+            & > div:before {
+                width: $activity-indicator-spinner-width * .56;
+                height: $activity-indicator-spinner-height;
+            }
+        }
+    }
+
+    &:not(.btn-xs):not(.btn-sm):not(.btn-md):not(.btn-lg):not(.btn-xl),
+    &.btn-md {
+        &.btn-activity-top.btn-activity-indicator-dots {
+            padding-top: $btn-font-size * 2;
+
+            & .activity-indicator {
+                top: $btn-font-size * .66;
+            }
+        }
+
+        &.btn-activity-bottom.btn-activity-indicator-dots {
+            padding-bottom: $btn-font-size * 2;
+
+            & .activity-indicator {
+                bottom: $btn-font-size * .66;
+            }
+        }
+
+        &.btn-activity-left.btn-activity-indicator-dots {
+            padding-left: $btn-font-size * 4;
+
+            & .activity-indicator {
+                left: $btn-font-size * .5;
+            }
+        }
+
+        &.btn-activity-right.btn-activity-indicator-dots {
+            padding-right: $btn-font-size * 4;
+
+            & .activity-indicator {
+                right: $btn-font-size * .5;
+            }
+        }
+
+        &.btn-activity-indicator-dots .activity-indicator > div,
+        & .activity-indicator-dots > div {
+            width: $btn-font-size / 1.25;
+            height: $btn-font-size / 1.25;
+        }
+
+        &.btn-activity-top.btn-activity-indicator-spinner {
+            padding-top: $btn-font-size * 2.75;
+
+            & .activity-indicator {
+                top: $btn-font-size * .33;
+            }
+        }
+
+        &.btn-activity-bottom.btn-activity-indicator-spinner {
+            padding-bottom: $btn-font-size * 2.75;
+
+            & .activity-indicator {
+                bottom: $btn-font-size * .33;
+            }
+        }
+
+        &.btn-activity-left.btn-activity-indicator-spinner {
+            padding-left: $btn-font-size * 2.75;
+
+            & .activity-indicator {
+                left: $btn-font-size * .5;
+            }
+        }
+
+        &.btn-activity-right.btn-activity-indicator-spinner {
+            padding-right: $btn-font-size * 2.75;
+
+            & .activity-indicator {
+                right: $btn-font-size * .5;
+            }
+        }
+
+        &.btn-activity-indicator-spinner .activity-indicator,
+        & .activity-indicator-spinner {
+            width: $btn-font-size * 1.75;
+            height: $btn-font-size * 1.75;
+
+            & > div:before {
+                width: $activity-indicator-spinner-width * .66;
+                height: $activity-indicator-spinner-height;
+            }
+        }
+    }
+
+    &.btn-lg {
+        &.btn-activity-top.btn-activity-indicator-dots {
+            padding-top: $btn-font-size * 2.75;
+
+            & .activity-indicator {
+                top: $btn-font-size * .66;
+            }
+        }
+
+        &.btn-activity-bottom.btn-activity-indicator-dots {
+            padding-bottom: $btn-font-size * 2.75;
+
+            & .activity-indicator {
+                bottom: $btn-font-size * .66;
+            }
+        }
+
+        &.btn-activity-left.btn-activity-indicator-dots {
+            padding-left: $btn-font-size * 5;
+
+            & .activity-indicator {
+                left: $btn-font-size * .5;
+            }
+        }
+
+        &.btn-activity-right.btn-activity-indicator-dots {
+            padding-right: $btn-font-size * 5;
+
+            & .activity-indicator {
+                right: $btn-font-size * .5;
+            }
+        }
+
+        &.btn-activity-indicator-dots .activity-indicator > div,
+        & .activity-indicator-dots > div {
+            width: $btn-font-size * 1.1;
+            height: $btn-font-size * 1.1;
+        }
+
+        &.btn-activity-top.btn-activity-indicator-spinner {
+            padding-top: $btn-font-size * 3.5;
+
+            & .activity-indicator {
+                top: $btn-font-size * .5;
+            }
+        }
+
+        &.btn-activity-bottom.btn-activity-indicator-spinner {
+            padding-bottom: $btn-font-size * 3.5;
+
+            & .activity-indicator {
+                bottom: $btn-font-size * .5;
+            }
+        }
+
+        &.btn-activity-left.btn-activity-indicator-spinner {
+            padding-left: $btn-font-size * 3.25;
+
+            & .activity-indicator {
+                left: $btn-font-size * .5;
+            }
+        }
+
+        &.btn-activity-right.btn-activity-indicator-spinner {
+            padding-right: $btn-font-size * 3.25;
+
+            & .activity-indicator {
+                right: $btn-font-size * .5;
+            }
+        }
+
+        &.btn-activity-indicator-spinner .activity-indicator,
+        & .activity-indicator-spinner {
+            width: $btn-font-size * 2.15;
+            height: $btn-font-size * 2.15;
+
+            & > div:before {
+                width: $activity-indicator-spinner-width * .75;
+            }
+        }
+    }
+
+    &.btn-xl {
+        &.btn-activity-top.btn-activity-indicator-dots {
+            padding-top: $btn-font-size * 3.75;
+
+            & .activity-indicator {
+                top: $btn-font-size * 1;
+            }
+        }
+
+        &.btn-activity-bottom.btn-activity-indicator-dots {
+            padding-bottom: $btn-font-size * 3.75;
+
+            & .activity-indicator {
+                bottom: $btn-font-size * 1;
+            }
+        }
+
+        &.btn-activity-left.btn-activity-indicator-dots {
+            padding-left: $btn-font-size * 6;
+
+            & .activity-indicator {
+                left: $btn-font-size * .75;
+            }
+        }
+
+        &.btn-activity-right.btn-activity-indicator-dots {
+            padding-right: $btn-font-size * 6;
+
+            & .activity-indicator {
+                right: $btn-font-size * .75;
+            }
+        }
+
+        &.btn-activity-indicator-dots .activity-indicator > div,
+        & .activity-indicator-dots > div {
+            width: $btn-font-size * 1.25;
+            height: $btn-font-size * 1.25;
+        }
+
+        &.btn-activity-top.btn-activity-indicator-spinner {
+            padding-top: $btn-font-size * 4.25;
+
+            & .activity-indicator {
+                top: $btn-font-size * .66;
+            }
+        }
+
+        &.btn-activity-bottom.btn-activity-indicator-spinner {
+            padding-bottom: $btn-font-size * 4.25;
+
+            & .activity-indicator {
+                bottom: $btn-font-size * .66;
+            }
+        }
+
+        &.btn-activity-left.btn-activity-indicator-spinner {
+            padding-left: $btn-font-size * 4;
+
+            & .activity-indicator {
+                left: $btn-font-size * .75;
+            }
+        }
+
+        &.btn-activity-right.btn-activity-indicator-spinner {
+            padding-right: $btn-font-size * 4;
+
+            & .activity-indicator {
+                right: $btn-font-size * .75;
+            }
+        }
+
+        &.btn-activity-indicator-spinner .activity-indicator,
+        & .activity-indicator-spinner {
+            width: $btn-font-size * 2.5;
+            height: $btn-font-size * 2.5;
+
+            & > div:before {
+                width: $activity-indicator-spinner-width * .75;
+            }
+        }
+    }
+}
+
+// Dots
+
+.btn-activity-indicator-dots .activity-indicator,
+.activity-indicator-dots {
+
+    & > div {
+        width: $activity-indicator-dot-size;
+        height: $activity-indicator-dot-size;
+        background-color: black;
+        border-radius: 100%;
+        display: inline-block;
+        animation: activity-indicator-dots 1.4s infinite ease-in-out both;
+    }
+
+    & > div:not(:last-child) {
+        margin-right: $activity-indicator-dot-size * .33;
+    }
+
+    &.activity-indicator-xs > div {
+        width: $activity-indicator-dot-size * .5;
+        height: $activity-indicator-dot-size * .5;
+    }
+
+    &.activity-indicator-sm > div {
+        width: $activity-indicator-dot-size * .75;
+        height: $activity-indicator-dot-size * .75;
+    }
+
+    &.activity-indicator-md > div {
+        width: $activity-indicator-dot-size * 1;
+        height: $activity-indicator-dot-size * 1;
+    }
+
+    &.activity-indicator-lg > div {
+        width: $activity-indicator-dot-size * 1.5;
+        height: $activity-indicator-dot-size * 1.5;
+    }
+
+    &.activity-indicator-xl > div {
+        width: $activity-indicator-dot-size * 2;
+        height: $activity-indicator-dot-size * 2;
+    }
+
+    @for $i from 0 through 12 {
+        & > div:nth-child(#{$i + 1}) {
+            animation-delay: $i * .16s;
+        }
+    }
+
+    @keyframes activity-indicator-dots {
+        0%, 80%, 100% {
+            transform: scale(0);
+        } 40% {
+            transform: scale(1.0);
+        }
+    }
+}
+
+.btn-primary.btn-activity-indicator-dots .activity-indicator > div,
+.btn-primary .activity-indicator-dots > div {
+    background-color: $btn-primary-color;
+}
+.btn-secondary.btn-activity-indicator-dots .activity-indicator > div,
+.btn-secondary .activity-indicator-dots > div {
+    background-color: $btn-secondary-color;
+}
+.btn-danger.btn-activity-indicator-dots .activity-indicator > div,
+.btn-danger .activity-indicator-dots > div {
+    background-color: $btn-danger-color;
+}
+.btn-success.btn-activity-indicator-dots .activity-indicator > div,
+.btn-success .activity-indicator-dots > div {
+    background-color: $btn-success-color;
+}
+.btn-warning.btn-activity-indicator-dots .activity-indicator > div,
+.btn-warning .activity-indicator-dots > div {
+    background-color: $btn-warning-color;
+}
+.btn-info.btn-activity-indicator-dots .activity-indicator > div,
+.btn-info .activity-indicator-dots > div {
+    background-color: $btn-info-color;
+}
+.btn-link.btn-activity-indicator-dots .activity-indicator > div,
+.btn-link .activity-indicator-dots > div {
+    background-color: $btn-link-color;
+}
+
+
+// Spinner
+
+.btn-activity-indicator-spinner .activity-indicator,
+.activity-indicator-spinner {
+    width: $activity-indicator-spinner-size;
+    height: $activity-indicator-spinner-size;
+
+    & > div  {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        &:before {
+            content: '';
+            display: block;
+            margin: 0 auto;
+            width: $activity-indicator-spinner-width;
+            height: $activity-indicator-spinner-height;
+            background-color: $gray-900;
+            border-radius: 5px;
+            animation: activity-indicator-spinner $activity-indicator-spinner-delay infinite ease-in-out both;
+        }
+    }
+
+    &.activity-indicator-xs {
+        width: $activity-indicator-spinner-size * .5;
+        height: $activity-indicator-spinner-size * .5;
+    }
+    &.activity-indicator-sm {
+        width: $activity-indicator-spinner-size * .75;
+        height: $activity-indicator-spinner-size * .75;
+    }
+    &.activity-indicator-md {
+        width: $activity-indicator-spinner-size * 1;
+        height: $activity-indicator-spinner-size * 1;
+    }
+    &.activity-indicator-lg {
+        width: $activity-indicator-spinner-size * 1.5;
+        height: $activity-indicator-spinner-size * 1.5;
+    }
+    &.activity-indicator-xl {
+        width: $activity-indicator-spinner-size * 2;
+        height: $activity-indicator-spinner-size * 2;
+    }
+
+    @include spinner-rotate-selectors(1, 12, $activity-indicator-spinner-delay);
+
+    @keyframes activity-indicator-spinner {
+        0%, 39%, 100% { opacity: 0; }
+        40% { opacity: 1; }
+    }
+}
+
+.btn-primary.btn-activity-indicator-spinner .activity-indicator > div:before,
+.btn-primary .activity-indicator-spinner > div:before {
+    background-color: $btn-primary-color;
+}
+.btn-secondary.btn-activity-indicator-spinner .activity-indicator > div:before,
+.btn-secondary .activity-indicator-spinner > div:before {
+    background-color: $btn-secondary-color;
+}
+.btn-danger.btn-activity-indicator-spinner .activity-indicator > div:before,
+.btn-danger .activity-indicator-spinner > div:before {
+    background-color: $btn-danger-color;
+}
+.btn-success.btn-activity-indicator-spinner .activity-indicator > div:before,
+.btn-success .activity-indicator-spinner > div:before {
+    background-color: $btn-success-color;
+}
+.btn-warning.btn-activity-indicator-spinner .activity-indicator > div:before,
+.btn-warning .activity-indicator-spinner > div:before {
+    background-color: $btn-warning-color;
+}
+.btn-info.btn-activity-indicator-spinner .activity-indicator > div:before,
+.btn-info .activity-indicator-spinner > div:before {
+    background-color: $btn-info-color;
+}
+.btn-link.btn-activity-indicator-spinner .activity-indicator > div:before,
+.btn-link .activity-indicator-spinner > div:before {
+    background-color: $btn-link-color;
+}

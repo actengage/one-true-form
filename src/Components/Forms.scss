@@ -100,6 +100,105 @@ select.form-control:not([size]):not([multiple]) {
     margin-left: -1.25rem;
 }
 
+.input-group {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    flex-direction: row;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
+
+    line-height: $form-control-line-height;
+    background-color: $form-control-background-color;
+    border: $form-control-border;
+    padding: $form-control-padding-y $form-control-padding-x;
+    font-size: $form-control-font-size;
+    box-shadow: $form-control-box-shadow;
+    border-radius: $form-control-border-radius;
+
+    .custom-file,
+    .custom-select,
+    .form-control {
+        flex: 1;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+
+        /*
+        position: relative;
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        width: 1%;
+        margin-bottom: 0;
+        */
+    }
+
+    .custom-select:not(:first-child),
+    .form-control:not(:first-child) {
+    }
+
+    .custom-select:not(:last-child),
+    .form-control:not(:last-child) {
+
+    }
+
+    .input-group-append > .input-group-text {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        padding-left: $form-control-padding-x * .85;
+        margin-left: $form-control-padding-x * .75;
+        border-left: 1px solid #ced4da;
+    }
+
+    .input-group-prepend > .input-group-text {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        padding-right: $form-control-padding-x * .85;
+        margin-right: $form-control-padding-x * .75;
+        border-right: 1px solid #ced4da;
+    }
+}
+
+.input-group-text {
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background: none;
+    text-align: center;
+    color: $input-color;
+    white-space: nowrap;
+    border-radius: .25rem;
+}
+
+.input-group-append,
+.input-group-prepend {
+    margin: 0;
+    display: inline-block;
+
+    /*
+    z-index: 1;
+    position: absolute;
+    */
+
+    /*
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%;
+    */
+}
+
 .custom-control {
     position: relative;
     display: inline-flex;

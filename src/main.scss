@@ -1,7 +1,8 @@
+@import "Mixins/Grid";
 @import "Mixins/Hover";
 @import "Mixins/Forms";
 @import "Mixins/Buttons";
-@import "Mixins/Grid";
+@import "Mixins/ActivityIndicators";
 
 @import "Helpers/Functions";
 @import "Helpers/Variables";
@@ -10,9 +11,10 @@
 
 .one-true-form {
     @import "Components/Typography";
-    @import "Components/Buttons";
-    @import "Components/Forms";
     @import "Components/Grid";
+    @import "Components/Forms";
+    @import "Components/Buttons";
     @import "Components/Images";
     @import "Components/Alerts";
+    @import "Components/ActivityIndicators";
 }

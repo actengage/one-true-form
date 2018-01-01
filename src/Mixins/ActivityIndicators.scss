@@ -1,0 +1,22 @@
+// ActivityIndicators Mixins
+
+@mixin spinner-rotate-selectors($start:1, $end:16, $delay:1.2s) {
+    @for $i from $start through $end {
+        & > div:first-child:nth-last-child(#{$i}),
+        & > div:first-child:nth-last-child(#{$i}) ~ div {
+            @include spinner-rotate-transform($i, $delay);
+        }
+    }
+}
+
+@mixin spinner-rotate-transform($total, $delay:1.2s) {
+    @for $i from 1 through $total {
+        &:nth-child(#{$i}) {
+            transform: rotate(#{360 / $total * $i}deg);
+
+            &:before {
+                animation-delay: -#{$delay - ($delay / $total * ($i - 1))};
+            }
+        }
+    }
+}
