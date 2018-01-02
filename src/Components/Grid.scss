@@ -41,9 +41,10 @@
 }
 
 .row {
-    //box-sizing: border-box;
-    margin-left: -$grid-gutter;
-    margin-right: -$grid-gutter;
+    &, & .row {
+        margin-left: -$grid-gutter;
+        margin-right: -$grid-gutter;
+    }
 
     &.no-gutter {
       margin-left: 0;
