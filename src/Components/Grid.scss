@@ -75,12 +75,9 @@
 @include columns('.col-xs-push-$i', 'margin-left', 11);
 @include columns('.col-xs-pull-$i', 'margin-right', 11);
 
-.d-xs-none, .d-none { display: none !important; }
-.d-xs-block, .d-block { display: block !important; }
-.d-xs-inline-block, .d-inline-block { display: inline-block !important; }
-.d-xs-inline, .d-inline { display: inline !important; }
-
+@include display-column-rules();
 @include display-spacing-rules();
+@include display-column-rules('xs');
 @include display-spacing-rules('xs');
 
 @media only screen and (min-width: $grid-sm-breakpoint) {

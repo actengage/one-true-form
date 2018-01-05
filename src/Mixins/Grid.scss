@@ -1,10 +1,26 @@
 // ./Mixins/Grid.scss
 
 @mixin display-column-rules($breakpoint) {
-    .d-#{$breakpoint}-block { display: block !important; }
-    .d-#{$breakpoint}-inline-block { display: inline-block !important; }
-    .d-#{$breakpoint}-inline { display: inline !important; }
-    .d-#{$breakpoint}-none { display: none !important; }
+    @if($breakpoint) {
+        .d-#{$breakpoint}-block { display: block !important; }
+        .d-#{$breakpoint}-inline-block { display: inline-block !important; }
+        .d-#{$breakpoint}-inline { display: inline !important; }
+        .d-#{$breakpoint}-none { display: none !important; }
+
+        .float-#{$breakpoint}-right { float: right; }
+        .float-#{$breakpoint}-left { float: left; }
+        .float-#{$breakpoint}-none { float: none; }
+    }
+    @else {
+        .d-block { display: block !important; }
+        .d-inline-block { display: inline-block !important; }
+        .d-inline { display: inline !important; }
+        .d-none { display: none !important; }
+
+        .float-right { float: right !important; }
+        .float-left { float: left !important; }
+        .float-none { float: none !important; }
+    }
 }
 
 
