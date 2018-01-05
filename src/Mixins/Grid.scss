@@ -1,6 +1,6 @@
 // ./Mixins/Grid.scss
 
-@mixin display-column-rules($breakpoint) {
+@mixin display-column-rules($breakpoint:false) {
     @if($breakpoint) {
         .d-#{$breakpoint}-block { display: block !important; }
         .d-#{$breakpoint}-inline-block { display: inline-block !important; }
