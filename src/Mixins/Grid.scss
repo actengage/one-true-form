@@ -85,10 +85,6 @@
 }
 
 @mixin columns($selector, $attr: 'width', $through: 12) {
-    @function size($i) {
-        @return ($grid-width / (12 / $i))
-    }
-
     @for $i from 1 through $through {
       #{str-replace('$i', $i, $selector)} {
           @if($i < 12) {
@@ -99,4 +95,8 @@
           }
       }
     }
+}
+
+@function size($i) {
+    @return ($grid-width / (12 / $i))
 }

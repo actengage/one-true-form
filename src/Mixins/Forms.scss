@@ -68,25 +68,23 @@
         border-radius: .2rem;
     }
 
-    .was-validated .form-control,
-    .was-validated .custom-select {
-        &:#{$state},
-        &.is-#{$state} {
-            border-color: $color;
+    .form-control.is-#{$state},
+    .custom-select.is-#{$state},
+    .was-validated .form-control:#{$state},
+    .was-validated .custom-select:#{$state} {
+        border-color: $color;
 
-            &:focus {
-                box-shadow: 0 0 0 .2rem rgba($color,.25);
-            }
+        &:focus {
+            box-shadow: 0 0 0 .2rem rgba($color,.25);
+        }
 
-            ~ .#{$state}-feedback,
-            ~ .#{$state}-tooltip {
-                display: block;
-            }
+        ~ .#{$state}-feedback,
+        ~ .#{$state}-tooltip {
+            display: block;
         }
     }
 
-
-    // TODO: redo check markup lol crap
+    .form-check-input,
     .was-validated .form-check-input {
         &:#{$state},
         &.is-#{$state} {
@@ -97,6 +95,7 @@
     }
 
     // custom radios and checks
+    .custom-control-input,
     .was-validated .custom-control-input {
         &:#{$state},
         &.is-#{$state} {
@@ -110,6 +109,7 @@
     }
 
     // custom file
+    .custom-file-input,
     .was-validated .custom-file-input {
         &:#{$state},
         &.is-#{$state} {
