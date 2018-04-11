@@ -235,8 +235,8 @@ select.form-control:not([size]):not([multiple]) {
             background-color: $custom-control-indicator-disabled-bg;
         }
 
-        ~ .custom-control-description {
-            color: $custom-control-description-disabled-color;
+        ~ .custom-control-label {
+            color: $custom-control-label-disabled-color;
         }
     }
 }

@@ -191,17 +191,17 @@
                 <label class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" checked>
                     <span class="custom-control-indicator"></span>
-                    <span class="custom-control-description">Check this custom checkbox</span>
+                    <span class="custom-control-label">Check this custom checkbox</span>
                 </label>
                 <label class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input">
                     <span class="custom-control-indicator"></span>
-                    <span class="custom-control-description">Check this custom checkbox</span>
+                    <span class="custom-control-label">Check this custom checkbox</span>
                 </label>
                 <label class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" disabled>
                     <span class="custom-control-indicator"></span>
-                    <span class="custom-control-description">Check this custom checkbox</span>
+                    <span class="custom-control-label">Check this custom checkbox</span>
                 </label>
             </div>
 
@@ -227,17 +227,17 @@
                     <label class="custom-control custom-radio">
                         <input type="radio" name="customRadio" class="custom-control-input">
                         <span class="custom-control-indicator"></span>
-                        <span class="custom-control-description">Check this custom checkbox</span>
+                        <span class="custom-control-label">Check this custom checkbox</span>
                     </label>
                     <label class="custom-control custom-radio">
                         <input type="radio" name="customRadio" class="custom-control-input">
                         <span class="custom-control-indicator"></span>
-                        <span class="custom-control-description">Check this custom checkbox</span>
+                        <span class="custom-control-label">Check this custom checkbox</span>
                     </label>
                     <label class="custom-control custom-radio">
                         <input type="radio" name="customRadio" class="custom-control-input" disabled>
                         <span class="custom-control-indicator"></span>
-                        <span class="custom-control-description">Check this custom checkbox</span>
+                        <span class="custom-control-label">Check this custom checkbox</span>
                     </label>
                 </div>
             </div>
@@ -478,6 +478,131 @@
 
         <h3>Validation</h3>
 
+        <form>
+            <div class="row">
+                <div class="col-sm-6">
+                    <h4>Valid Fields</h4>
+
+                    <div class="form-group">
+                        <label>Text Field</label>
+                        <input type="text" class="form-control is-valid" value="Some Value" required>
+                        <div class="valid-feedback">This field is valid!</div>
+                        <div class="invalid-feedback">This field is invalid!</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Select Field</label>
+                        <select class="form-control is-valid" required>
+                            <option value=""></option>
+                            <option value="1">Option 1</option>
+                            <option value="2" selected>Option 2</option>
+                            <option value="3">Option 3</option>
+                            <option value="4">Option 4</option>
+                            <option value="5">Option 5</option>
+                        </select>
+                        <div class="valid-feedback">This field is valid!</div>
+                        <div class="invalid-feedback">This field is invalid!</div>
+                    </div>
+
+                    <div class="form-group">
+                        <h6>Checkboxes</h6>
+
+                        <div class="custom-controls-stacked">
+                            <label class="custom-control custom-checkbox">
+                                <input type="checkbox" name="validCheckbox[]" class="custom-control-input is-valid" required checked>
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-label is-valid">Check this custom checkbox</span>
+                            </label>
+
+                            <label class="custom-control custom-checkbox">
+                                <input type="checkbox" name="validCheckbox[]" class="custom-control-input is-valid" required checked>
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-label">Check this custom checkbox</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <h6>Radio Fields</h6>
+
+                        <div class="custom-controls-stacked">
+                            <label class="custom-control custom-radio">
+                                <input type="radio" name="validRadio" class="custom-control-input is-valid" value="1" required>
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-label">Check this custom radio</span>
+                            </label>
+
+                            <label class="custom-control custom-radio">
+                                <input type="radio" name="validRadio" class="custom-control-input is-valid" value="2" required checked>
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-label">Check this custom radio</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <h4>Invalid Fields</h4>
+
+                    <div class="form-group">
+                        <label>Text Field</label>
+                        <input type="text" class="form-control is-invalid">
+                        <div class="valid-feedback">This field is valid!</div>
+                        <div class="invalid-feedback">This field is invalid!</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Select Field</label>
+                        <select class="form-control is-invalid">
+                            <option value="" selected></option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                            <option value="4">Option 4</option>
+                            <option value="5">Option 5</option>
+                        </select>
+                        <div class="valid-feedback">This field is valid!</div>
+                        <div class="invalid-feedback">This field is invalid!</div>
+                    </div>
+
+                    <div class="form-group">
+                        <h6>Checkboxes</h6>
+
+                        <div class="custom-controls-stacked">
+                            <label class="custom-control custom-checkbox">
+                                <input type="checkbox" name="invalidCheckbox[]" class="custom-control-input is-invalid" required>
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-label">Check this custom checkbox</span>
+                            </label>
+
+                            <label class="custom-control custom-checkbox">
+                                <input type="checkbox" name="invalidCheckbox[]" class="custom-control-input is-invalid" required>
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-label">Check this custom checkbox</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <h6>Radio Fields</h6>
+
+                        <div class="custom-controls-stacked">
+                            <label class="custom-control custom-radio">
+                                <input type="radio" name="invalidRadio" class="custom-control-input is-invalid" value="1" required>
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-label">Check this custom radio</span>
+                            </label>
+
+                            <label class="custom-control custom-radio">
+                                <input type="radio" name="invalidRadio" class="custom-control-input is-invalid" value="2" required>
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-label">Check this custom radio</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
         <form class="was-validated">
             <div class="row">
                 <div class="col-sm-6">
@@ -511,13 +636,13 @@
                             <label class="custom-control custom-checkbox">
                                 <input type="checkbox" name="validCheckbox[]" class="custom-control-input" required checked>
                                 <span class="custom-control-indicator"></span>
-                                <span class="custom-control-description">Check this custom checkbox</span>
+                                <span class="custom-control-label">Check this custom checkbox</span>
                             </label>
 
                             <label class="custom-control custom-checkbox">
                                 <input type="checkbox" name="validCheckbox[]" class="custom-control-input" required checked>
                                 <span class="custom-control-indicator"></span>
-                                <span class="custom-control-description">Check this custom checkbox</span>
+                                <span class="custom-control-label">Check this custom checkbox</span>
                             </label>
                         </div>
                     </div>
@@ -529,13 +654,13 @@
                             <label class="custom-control custom-radio">
                                 <input type="radio" name="validRadio" class="custom-control-input" value="1" required>
                                 <span class="custom-control-indicator"></span>
-                                <span class="custom-control-description">Check this custom radio</span>
+                                <span class="custom-control-label">Check this custom radio</span>
                             </label>
 
                             <label class="custom-control custom-radio">
                                 <input type="radio" name="validRadio" class="custom-control-input" value="2" required checked>
                                 <span class="custom-control-indicator"></span>
-                                <span class="custom-control-description">Check this custom radio</span>
+                                <span class="custom-control-label">Check this custom radio</span>
                             </label>
                         </div>
                     </div>
@@ -571,13 +696,13 @@
                             <label class="custom-control custom-checkbox">
                                 <input type="checkbox" name="invalidCheckbox[]" class="custom-control-input" required>
                                 <span class="custom-control-indicator"></span>
-                                <span class="custom-control-description">Check this custom checkbox</span>
+                                <span class="custom-control-label">Check this custom checkbox</span>
                             </label>
 
                             <label class="custom-control custom-checkbox">
                                 <input type="checkbox" name="invalidCheckbox[]" class="custom-control-input" required>
                                 <span class="custom-control-indicator"></span>
-                                <span class="custom-control-description">Check this custom checkbox</span>
+                                <span class="custom-control-label">Check this custom checkbox</span>
                             </label>
                         </div>
                     </div>
@@ -589,13 +714,13 @@
                             <label class="custom-control custom-radio">
                                 <input type="radio" name="invalidRadio" class="custom-control-input" value="1" required>
                                 <span class="custom-control-indicator"></span>
-                                <span class="custom-control-description">Check this custom radio</span>
+                                <span class="custom-control-label">Check this custom radio</span>
                             </label>
 
                             <label class="custom-control custom-radio">
                                 <input type="radio" name="invalidRadio" class="custom-control-input" value="2" required>
                                 <span class="custom-control-indicator"></span>
-                                <span class="custom-control-description">Check this custom radio</span>
+                                <span class="custom-control-label">Check this custom radio</span>
                             </label>
                         </div>
                     </div>

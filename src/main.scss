@@ -8,13 +8,10 @@
 @import "Helpers/Variables";
 
 @import "Components/Normalize";
-
-.one-true-form {
-    @import "Components/Typography";
-    @import "Components/Grid";
-    @import "Components/Forms";
-    @import "Components/Buttons";
-    @import "Components/Images";
-    @import "Components/Alerts";
-    @import "Components/ActivityIndicators";
-}
+@import "Components/Typography";
+@import "Components/Grid";
+@import "Components/Forms";
+@import "Components/Buttons";
+@import "Components/Images";
+@import "Components/Alerts";
+@import "Components/ActivityIndicators";
