@@ -4,7 +4,7 @@ label {
     margin-bottom: .5em;
 }
 
-legend {
+fieldset legend {
     margin-bottom: 18px;
     font-size: 18px;
     font-weight: bold;
@@ -17,12 +17,15 @@ legend {
     margin-bottom: $form-group-margin-bottom;
 }
 
-.form-control {
+.form-control,
+input.form-control,
+textarea.form-control,
+select.form-control {
     margin: 0;
     width: 100%;
     height: auto;
     display: block;
-    background-image: none;
+    //background-image: none;
     background-clip: padding-box;
     line-height: $form-control-line-height;
     background-color: $form-control-background-color;
@@ -130,6 +133,8 @@ select.form-control:not([size]):not([multiple]) {
         border: none;
         box-shadow: none;
         padding: 0;
+        margin: 0;
+        height: auto;
 
         /*
         position: relative;

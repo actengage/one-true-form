@@ -42,6 +42,7 @@
 
 .row {
     &, & .row {
+        width: auto;
         margin-left: -$grid-gutter;
         margin-right: -$grid-gutter;
     }

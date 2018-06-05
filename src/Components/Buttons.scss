@@ -11,8 +11,8 @@
     padding: $btn-padding-y $btn-padding-x;
     border-radius: $btn-border-radius;
     font-size: $btn-font-size;
-    line-height: $btn-font-size;
     border: $btn-border;
+    line-height: 1.25em;
 
     &:focus {
         outline: none;
